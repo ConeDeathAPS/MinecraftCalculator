@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.andrew.minecraftcalculator.CircleHelper">
+    <LinearLayout
+        android:id="@+id/radius_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/decrement_radius"
+            android:onClick="decrementRadius"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/decrement"
+            android:textSize="50sp"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimaryDark"/>
+        <EditText
+            android:id="@+id/radius_input"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:inputType="number"
+            android:textSize="50dp"
+            android:hint="@string/item_hint"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+        <Button
+            android:id="@+id/increment_radius"
+            android:onClick="incrementRadius"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/increment"
+            android:textSize="50sp"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimaryDark" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/draw_circle"
+        android:onClick="drawCircle"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="@string/draw"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/radius_controls"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
