@@ -22,13 +22,12 @@
             android:textSize="50sp"
             android:textColor="#FFFFFF"
             android:background="@color/colorPrimaryDark"/>
-        <EditText
+        <TextView
             android:id="@+id/radius_input"
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:inputType="number"
-            android:textSize="50dp"
-            android:hint="@string/item_hint"
+            android:textSize="50sp"
+            android:text="10"
             android:gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -43,19 +42,12 @@
             android:textColor="#FFFFFF"
             android:background="@color/colorPrimaryDark" />
     </LinearLayout>
-    <Button
-        android:id="@+id/draw_circle"
-        android:onClick="drawCircle"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:text="@string/draw"
-        android:textSize="30sp"
-        android:textColor="#FFFFFF"
-        android:textAllCaps="false"
-        android:background="@color/colorPrimary"
+    <com.example.andrew.minecraftcalculator.SquareView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/squaresView"
         android:layout_below="@id/radius_controls"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
-
+        />
 
 </RelativeLayout>
