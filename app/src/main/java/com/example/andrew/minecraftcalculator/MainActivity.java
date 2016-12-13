@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchRecipeHelper(View view) {
+        Intent intent = new Intent(this, Recipes.class);
+        startActivity(intent);
+    }
+
 }

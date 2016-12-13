@@ -56,7 +56,7 @@
             android:background="@color/colorPrimary" />
         <Button
             android:id="@+id/goto_recipes"
-            android:onClick="launchRecipes"
+            android:onClick="launchRecipeHelper"
             android:text="@string/recipes"
             android:textSize="20sp"
             android:textColor="#FFFFFF"

@@ -36,4 +36,6 @@
     <string name="increment">+</string>
     <string name="decrement">-</string>
     <string name="draw">Draw</string>
+    <!-- Recipe Helper Strings -->
+    <string name="recipeHint">Search for an item...</string>
 </resources>
