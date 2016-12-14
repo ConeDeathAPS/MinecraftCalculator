@@ -18,7 +18,7 @@ import java.util.List;
 public class Recipes extends AppCompatActivity {
 
     private final String[] items = new String[] {
-            "Wood Planks", "Stick", "Torch", "Enchanting Table", "Crafting Table"
+        "Wood Planks", "Stick", "Torch", "Enchanting Table", "Crafting Table"
     };
 
     public CraftableItem selectedItem;
@@ -28,7 +28,6 @@ public class Recipes extends AppCompatActivity {
     public CraftableItem errorItem;
     public CraftableItem emptyItem;
     public Context thisContext;
-    public View overallView;
     public AutoCompleteTextView searchInput;
     public ImageView r1c1;
     public ImageView r1c2;
@@ -44,28 +43,34 @@ public class Recipes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
-        overallView = findViewById(R.layout.activity_recipes);
         thisContext = this.getApplicationContext();
 
         //init temporary craftable item for testing
         String[][] tempLayout = {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+            {null, null, null},
+            {null, null, null},
+            {null, null, null}
+        };
+        String[][] planksLayout = {
+            {null, null, null},
+            {null, "stone", null},
+            {null, null, null}
         };
         String[] tempIngredients = {null};
-        String tempName = "itemNotFound";
-        int tempYield = 1;
-        errorItem = new CraftableItem(tempName, tempLayout, tempYield, tempIngredients);
-
-        //Init wood planks item
-        String[][] planksLayout = {
-                {null, null, null},
-                {null, "stone", null},
-                {null, null, null}
-        };
         String[] planksIngredients = {"stone"};
-        allItems.add(new CraftableItem("Wood Planks", planksLayout, 4, planksIngredients));
+        errorItem = new CraftableItem.Builder("unknownItem")
+            .withLayout(tempLayout)
+            .usingIngredients(tempIngredients)
+            .yielding(1)
+            .looksLike("@drawable/undefined")
+            .build();
+        //Init wood planks item
+        allItems.add(new CraftableItem.Builder("Wood Planks")
+            .withLayout(planksLayout)
+            .usingIngredients(planksIngredients)
+            .yielding(4)
+            .looksLike("@drawable/oak_planks")
+            .build());
 
         //Init the auto-completing search bar
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, items);
@@ -100,7 +105,8 @@ public class Recipes extends AppCompatActivity {
     public CraftableItem findItem(String name) {
         CraftableItem foundItem = errorItem;
         for (int i = 0; i < allItems.size(); i++) {
-            if (allItems.get(i).name.equals(name)) {
+            if (allItems.get(i).getName().equals(name)) {
+                Log.i("Recipes", "Found item!");
                 foundItem = allItems.get(i);
                 break;
             }
@@ -109,32 +115,32 @@ public class Recipes extends AppCompatActivity {
     }
 
     public void fillInterface(CraftableItem targetItem) {
-        if (targetItem.layout[0][0] != null) {
-            r1c1.setImageResource(getDrawable(targetItem.layout[0][0], thisContext));
+        if (targetItem.getLayout()[0][0] != null) {
+            r1c1.setImageResource(getDrawable(targetItem.getLayout()[0][0], thisContext));
         }
-        if (targetItem.layout[0][1] != null) {
-            r1c2.setImageResource(getDrawable(targetItem.layout[0][1], thisContext));
+        if (targetItem.getLayout()[0][1] != null) {
+            r1c2.setImageResource(getDrawable(targetItem.getLayout()[0][1], thisContext));
         }
-        if (targetItem.layout[0][2] != null) {
-            r1c3.setImageResource(getDrawable(targetItem.layout[0][2], thisContext));
+        if (targetItem.getLayout()[0][2] != null) {
+            r1c3.setImageResource(getDrawable(targetItem.getLayout()[0][2], thisContext));
         }
-        if (targetItem.layout[1][0] != null) {
-            r2c1.setImageResource(getDrawable(targetItem.layout[1][0], thisContext));
+        if (targetItem.getLayout()[1][0] != null) {
+            r2c1.setImageResource(getDrawable(targetItem.getLayout()[1][0], thisContext));
         }
-        if (targetItem.layout[1][1] != null) {
-            r2c2.setImageResource(getDrawable(targetItem.layout[1][1], thisContext));
+        if (targetItem.getLayout()[1][1] != null) {
+            r2c2.setImageResource(getDrawable(targetItem.getLayout()[1][1], thisContext));
         }
-        if (targetItem.layout[1][2] != null) {
-            r2c3.setImageResource(getDrawable(targetItem.layout[1][2], thisContext));
+        if (targetItem.getLayout()[1][2] != null) {
+            r2c3.setImageResource(getDrawable(targetItem.getLayout()[1][2], thisContext));
         }
-        if (targetItem.layout[2][0] != null) {
-            r3c1.setImageResource(getDrawable(targetItem.layout[2][0], thisContext));
+        if (targetItem.getLayout()[2][0] != null) {
+            r3c1.setImageResource(getDrawable(targetItem.getLayout()[2][0], thisContext));
         }
-        if (targetItem.layout[2][1] != null) {
-            r3c2.setImageResource(getDrawable(targetItem.layout[2][1], thisContext));
+        if (targetItem.getLayout()[2][1] != null) {
+            r3c2.setImageResource(getDrawable(targetItem.getLayout()[2][1], thisContext));
         }
-        if (targetItem.layout[2][2] != null) {
-            r3c3.setImageResource(getDrawable(targetItem.layout[2][2], thisContext));
+        if (targetItem.getLayout()[2][2] != null) {
+            r3c3.setImageResource(getDrawable(targetItem.getLayout()[2][2], thisContext));
         }
     }
 
