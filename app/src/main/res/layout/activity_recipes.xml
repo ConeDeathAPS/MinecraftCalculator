@@ -9,25 +9,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.andrew.minecraftcalculator.Recipes">
 
+    <AutoCompleteTextView
+        android:id="@+id/itemInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/recipeHint"
+        android:inputType="text"
+        android:imeOptions="actionDone">
+        <requestFocus/>
+    </AutoCompleteTextView>
     <RelativeLayout
         android:id="@+id/interfaceContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:background="@color/darkGray">
+        android:layout_width="fill_parent"
+        android:layout_height="215sp"
+        android:layout_below="@id/itemInput"
+        android:paddingTop="39sp"
+        android:paddingLeft="9sp"
+        android:paddingStart="9sp"
+        android:background="@drawable/crafting_interface">
         <LinearLayout
             android:id="@+id/Row1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="166sp"
+            android:layout_height="52sp"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:padding="5sp">
+            android:layout_marginBottom="7sp">
             <LinearLayout
                 android:id="@+id/r1c1"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginEnd="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r1c1_image"
@@ -37,12 +46,12 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/r1c2"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginEnd="10sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6sp"
+                android:layout_marginEnd="6sp"
+                android:layout_marginLeft="7sp"
+                android:layout_marginStart="7sp"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r1c2_image"
@@ -52,10 +61,8 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/r1c3"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r1c3_image"
@@ -66,18 +73,15 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/Row2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="166sp"
+            android:layout_height="52sp"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"
             android:layout_below="@id/Row1"
-            android:padding="5sp">
+            android:layout_marginBottom="7sp">
             <LinearLayout
                 android:id="@+id/r2c1"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginEnd="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r2c1_image"
@@ -87,12 +91,12 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/r2c2"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginEnd="10sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6sp"
+                android:layout_marginEnd="6sp"
+                android:layout_marginLeft="7sp"
+                android:layout_marginStart="7sp"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r2c2_image"
@@ -102,10 +106,8 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/r2c3"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r2c3_image"
@@ -116,18 +118,14 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/Row3"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="166sp"
+            android:layout_height="52sp"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:layout_below="@id/Row2"
-            android:padding="5sp">
+            android:layout_below="@id/Row2">
             <LinearLayout
                 android:id="@+id/r3c1"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginEnd="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r3c1_image"
@@ -137,12 +135,12 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/r3c2"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginEnd="10sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6sp"
+                android:layout_marginEnd="6sp"
+                android:layout_marginLeft="7sp"
+                android:layout_marginStart="7sp"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r3c2_image"
@@ -152,10 +150,8 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/r3c3"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
+                android:layout_width="51sp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/r3c3_image"
@@ -164,17 +160,36 @@
                     />
             </LinearLayout>
         </LinearLayout>
+        <FrameLayout
+            android:id="@+id/output_container"
+            android:layout_width="78sp"
+            android:layout_height="78sp"
+            android:layout_marginLeft="287sp"
+            android:layout_marginStart="287sp"
+            android:layout_marginTop="46sp">
+            <ImageView
+                android:id="@+id/output_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/yield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="end|bottom"
+                />
+        </FrameLayout>
 
     </RelativeLayout>
-
-    <AutoCompleteTextView
-        android:id="@+id/itemInput"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/recipeDescription"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/recipeHint"
         android:layout_below="@id/interfaceContainer"
-        android:inputType="text"
-        android:imeOptions="actionDone">
-        <requestFocus/>
-    </AutoCompleteTextView>
+        />
+
+
 </RelativeLayout>
