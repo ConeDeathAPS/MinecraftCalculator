@@ -23,7 +23,16 @@ public class Recipes extends AppCompatActivity {
         "Chiseled Sandstone", "Chiseled Red Sandstone", "Diorite", "Polished Diorite", "Andesite", "Polished Andesite",
         "Block of Gold", "Block of Iron", "Block of Diamond", "Bookshelf", "Snow Block", "Clay Block",
         "Jack o'Lantern", "Glowstone", "Block of Lapis Lazuli", "Melon", "Mossy Cobblestone", "Block of Emerald", "Stained Glass",
-        "Stairs"
+        "Stairs", "Mossy Stone Bricks", "Stone Bricks", "Chiseled Stone Bricks", "Nether Bricks", "Red Nether Bricks",
+        "Hay Bale", "Stained Clay", "Block of Coal", "Prismarine", "Prismarine Bricks", "Dark Prismarine",
+        "Coarse Dirt", "Bricks", "Purpur Bricks", "Purpur Pillar", "Magma Block", "Bone Block", "Nether Wart Block",
+        "Wool", "Dyed Wool", "Sea Lantern", "Enchanting Table", "Painting", "Torch", "Crafting Table",
+        "Ladder", "Snow", "Jukebox", "Iron Bars", "Wood Fence", "Nether Brick Fence", "Glass Pane", "End Crystal",
+        "Ender Chest", "Chest", "Sign", "Item Frame", "Cobblestone Wall", "Flower Pot", "Trapped Chest",
+        "Bed", "Slime Block", "Armor Stand", "Furnace", "Carpet", "Anvil", "End Rod", "Shulker Box", "Colored Shulker Box",
+        "Banner", "Lever", "Button", "Pressure Plate", "Redstone Torch", "Note Block", "Fence Gate", "Trapdoor",
+        "Redstone Dust", "Weighted Pressure Plate (Heavy)", "Weighted Pressure Plate (Light)"
+
     };
 
     public CraftableItem selectedItem;
