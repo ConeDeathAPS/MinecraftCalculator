@@ -31,8 +31,13 @@ public class Recipes extends AppCompatActivity {
         "Ender Chest", "Chest", "Sign", "Item Frame", "Cobblestone Wall", "Flower Pot", "Trapped Chest",
         "Bed", "Slime Block", "Armor Stand", "Furnace", "Carpet", "Anvil", "End Rod", "Shulker Box", "Colored Shulker Box",
         "Banner", "Lever", "Button", "Pressure Plate", "Redstone Torch", "Note Block", "Fence Gate", "Trapdoor",
-        "Redstone Dust", "Weighted Pressure Plate (Heavy)", "Weighted Pressure Plate (Light)"
-
+        "Redstone Dust", "Weighted Pressure Plate (Heavy)", "Weighted Pressure Plate (Light)", "Redstone Repeater",
+        "Hopper", "Redstone Lamp", "Daylight Sensor", "Door", "Dispenser", "Piston", "Sticky Piston",
+        "Comparator", "TNT", "Observer", "Carrot on a Stick", "Rail", "Minecart with Chest", "Powered Rail",
+        "Detector Rail", "Minecart", "Minecart with TNT", "Activator Rail", "Minecart with Hopper",
+        "Boat", "Minecart with Furnace", "Mushroom Stew", "Bread", "Cookie", "Golden Carrot", "Pumpkin Pie",
+        "Rabbit Stew", "Golden Apple", "Pickaxe", "Shovel", "Shears", "Hoe", "Fishing Rod", "Axe", "Clock",
+        "Compass", "Lead"
     };
 
     public CraftableItem selectedItem;
