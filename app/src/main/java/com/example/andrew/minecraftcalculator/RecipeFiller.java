@@ -1836,7 +1836,7 @@ public class RecipeFiller {
                 .ofType("normal")
                 .usingIngredients(ings)
                 .yielding(1)
-                .describedAs("This recipe is valid for Iron, all wood, Gold, and Cobblestone.")
+                .describedAs("This recipe is valid for Iron, all wood planks, Gold, and Cobblestone.")
                 .looksLike("@drawable/diamond_axe")
                 .build());
         // ================== Clock =================== //
@@ -1880,6 +1880,383 @@ public class RecipeFiller {
                 .usingIngredients(ings)
                 .yielding(2)
                 .looksLike("@drawable/lead")
+                .build());
+        // ================== Sword =================== //
+        tempLayout = new String[][] {
+                {null, "diamond", null},
+                {null, "diamond", null},
+                {null, "stick", null}
+        };
+        ings = new String[] {"stick", "diamond"};
+        itemArr.add(new CraftableItem.Builder("Sword")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is valid for all wood planks, Cobblestone, Iron, Gold, and Diamond.")
+                .looksLike("@drawable/sword_diamond")
+                .build());
+        // ================== Helmet =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"diamond", "diamond", "diamond"},
+                {"diamond", null, "diamond"}
+        };
+        ings = new String[] {"diamond"};
+        itemArr.add(new CraftableItem.Builder("Helmet")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
+                .looksLike("@drawable/helmet_diamond")
+                .build());
+        // ================== Chestplate =================== //
+        tempLayout = new String[][] {
+                {"diamond", null, "diamond"},
+                {"diamond", "diamond", "diamond"},
+                {"diamond", "diamond", "diamond"}
+        };
+        ings = new String[] {"diamond"};
+        itemArr.add(new CraftableItem.Builder("Chestplate")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
+                .looksLike("@drawable/chestplate_diamond")
+                .build());
+        // ================== Leggings =================== //
+        tempLayout = new String[][] {
+                {"diamond", "diamond", "diamond"},
+                {"diamond", null, "diamond"},
+                {"diamond", null, "diamond"}
+        };
+        ings = new String[] {"diamond"};
+        itemArr.add(new CraftableItem.Builder("Leggings")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
+                .looksLike("@drawable/leggings_diamond")
+                .build());
+        // ================== Boots =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"diamond", null, "diamond"},
+                {"diamond", null, "diamond"}
+        };
+        ings = new String[] {"diamond"};
+        itemArr.add(new CraftableItem.Builder("Boots")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
+                .looksLike("@drawable/boots_diamond")
+                .build());
+        // ================== Bow =================== //
+        tempLayout = new String[][] {
+                {null, "stick", "string"},
+                {"stick", null, "string"},
+                {null, "stick", "string"}
+        };
+        ings = new String[] {"stick", "string"};
+        itemArr.add(new CraftableItem.Builder("Bow")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/bow")
+                .build());
+        // ================== Shield =================== //
+        tempLayout = new String[][] {
+                {"oak_wood_plank", "iron_ingot", "oak_wood_plank"},
+                {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"},
+                {null, "oak_wood_plank", null}
+        };
+        ings = new String[] {"oak_wood_plank", "iron_ingot"};
+        itemArr.add(new CraftableItem.Builder("Shield")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is valid for any combinations of types of wood planks.")
+                .looksLike("@drawable/shield")
+                .build());
+        // ================== Arrow =================== //
+        tempLayout = new String[][] {
+                {null, "flint", null},
+                {null, "stick", null},
+                {null, "feather", null}
+        };
+        ings = new String[] {"flint", "stick", "feather"};
+        itemArr.add(new CraftableItem.Builder("Arrow")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(4)
+                .looksLike("@drawable/arrow")
+                .build());
+        // ================== Spectral Arrow =================== //
+        tempLayout = new String[][] {
+                {null, "glowstone_dust", null},
+                {"glowstone_dust", "arrow", "glowstone_dust"},
+                {null, "glowstone_dust", null}
+        };
+        ings = new String[] {"arrow", "glowstone_dust"};
+        itemArr.add(new CraftableItem.Builder("Spectral Arrow")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(2)
+                .describedAs("This recipe is valid for any combinations of types of wood planks.")
+                .looksLike("@drawable/arrow_spectral")
+                .build());
+        // ================== Tipped Arrow =================== //
+        tempLayout = new String[][] {
+                {"arrow", "arrow", "arrow"},
+                {"arrow", "water_bottle", "arrow"},
+                {"arrow", "arrow", "arrow"}
+        };
+        ings = new String[] {"arrow", "water_bottle"};
+        itemArr.add(new CraftableItem.Builder("Tipped Arrow")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(8)
+                .describedAs("This recipe is valid for any Lingering Potion.")
+                .looksLike("@drawable/arrow")
+                .build());
+        // ================== Wheat =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "hay_bale", null},
+                {null, null, null}
+        };
+        ings = new String[] {"hay_bale"};
+        itemArr.add(new CraftableItem.Builder("Wheat")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(9)
+                .looksLike("@drawable/wheat")
+                .build());
+        // ================== Bowl =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"oak_wood_plank", null, "oak_wood_plank"},
+                {null, "oak_wood_plank", null}
+        };
+        ings = new String[] {"oak_wood_plank"};
+        itemArr.add(new CraftableItem.Builder("Bowl")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(4)
+                .looksLike("@drawable/bowl")
+                .build());
+        // ================== Coal =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "coal_block", null},
+                {null, null, null}
+        };
+        ings = new String[] {"coal_block"};
+        itemArr.add(new CraftableItem.Builder("Coal")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(9)
+                .looksLike("@drawable/coal")
+                .build());
+        // ================== Sugar =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "sugar_cane", null},
+                {null, null, null}
+        };
+        ings = new String[] {"sugar_cane"};
+        itemArr.add(new CraftableItem.Builder("Sugar")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/sugar")
+                .build());
+        // ================== Leather =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"rabbit_hide", "rabbit_hide", null},
+                {"rabbit_hide", "rabbit_hide", null}
+        };
+        ings = new String[] {"rabbit_hide"};
+        itemArr.add(new CraftableItem.Builder("Leather")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/leather")
+                .build());
+        // ================== Dandelion Yellow =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "dandelion", null},
+                {null, null, null}
+        };
+        ings = new String[] {"dandelion"};
+        itemArr.add(new CraftableItem.Builder("Dandelion Yellow")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is also valid for Sunflower (yields 2).")
+                .looksLike("@drawable/dandelion_yellow")
+                .build());
+        // ================== Gray Dye =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"ink_sac", "bonemeal", null},
+                {null, null, null}
+        };
+        ings = new String[] {"ink_sac", "bonemeal"};
+        itemArr.add(new CraftableItem.Builder("Gray Dye")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(2)
+                .looksLike("@drawable/gray_dye")
+                .build());
+        // ================== Pumpkin Seeds =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "pumpkin", null},
+                {null, null, null}
+        };
+        ings = new String[] {"pumpkin"};
+        itemArr.add(new CraftableItem.Builder("Pumpkin Seeds")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(4)
+                .looksLike("@drawable/pumpkin_seeds")
+                .build());
+        // ================== Gold Nugget =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "gold_ingot", null},
+                {null, null, null}
+        };
+        ings = new String[] {"gold_ingot"};
+        itemArr.add(new CraftableItem.Builder("Gold Nugget")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(9)
+                .looksLike("@drawable/gold_nugget")
+                .build());
+        // ================== Gold Ingot =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "gold_block", null},
+                {null, null, null}
+        };
+        ings = new String[] {"gold_block"};
+        itemArr.add(new CraftableItem.Builder("Gold Ingot")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(9)
+                .describedAs("Gold ingots can also be crafted using a full crafting interface of, or 9, gold nuggets.")
+                .looksLike("@drawable/gold_ingot")
+                .build());
+        // ================== Rose Red =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "red_tulip", null},
+                {null, null, null}
+        };
+        ings = new String[] {"red_tulip"};
+        itemArr.add(new CraftableItem.Builder("Rose Red")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("This recipe is also valid for Poppy, Beetroot, and Rose Bush (yields 2)")
+                .looksLike("@drawable/rose_red")
+                .build());
+        // ================== Orange Dye =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "orange_tulip", null},
+                {null, null, null}
+        };
+        ings = new String[] {"orange_tulip"};
+        itemArr.add(new CraftableItem.Builder("Orange Dye")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("Orange Dye can also be crafted via combining Rose Red and Dandelion Yellow (shapeless recipe, yields 2)")
+                .looksLike("@drawable/orange_dye")
+                .build());
+        // ================== Pink Dye =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {null, "pink_tulip", null},
+                {null, null, null}
+        };
+        ings = new String[] {"pink_tulip"};
+        itemArr.add(new CraftableItem.Builder("Pink Dye")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("Pink Dye can also be crafted from one Peony (yields 2) or combining Rose Red and Bonemeal (shapeless recipe, yields 2).")
+                .looksLike("@drawable/pink_dye")
+                .build());
+        // ================== Lime Dye =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"cactus_green", "bonemeal", null},
+                {null, null, null}
+        };
+        ings = new String[] {"cactus_green", "bonemeal"};
+        itemArr.add(new CraftableItem.Builder("Lime Dye")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(2)
+                .looksLike("@drawable/lime_dye")
+                .build());
+        // ================== Purple Dye =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"lapis", "rose_red", null},
+                {null, null, null}
+        };
+        ings = new String[] {"lapis", "rose_red"};
+        itemArr.add(new CraftableItem.Builder("Purple Dye")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(2)
+                .looksLike("@drawable/purple_dye")
+                .build());
+        // ================== Cyan Dye =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"lapis", "cactus_green", null},
+                {null, null, null}
+        };
+        ings = new String[] {"lapis", "cactus_green"};
+        itemArr.add(new CraftableItem.Builder("Cyan Dye")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(2)
+                .looksLike("@drawable/cyan_dye")
                 .build());
 
 

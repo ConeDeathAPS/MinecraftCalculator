@@ -37,7 +37,10 @@ public class Recipes extends AppCompatActivity {
         "Detector Rail", "Minecart", "Minecart with TNT", "Activator Rail", "Minecart with Hopper",
         "Boat", "Minecart with Furnace", "Mushroom Stew", "Bread", "Cookie", "Golden Carrot", "Pumpkin Pie",
         "Rabbit Stew", "Golden Apple", "Pickaxe", "Shovel", "Shears", "Hoe", "Fishing Rod", "Axe", "Clock",
-        "Compass", "Lead"
+        "Compass", "Lead", "Sword", "Helmet", "Chestplate", "Leggings", "Boots", "Bow", "Shield", "Arrow",
+        "Spectral Arrow", "Tipped Arrow", "Wheat", "Bowl", "Sugar", "Leather", "Dandelion Yellow", "Gray Dye",
+        "Pumpkin Seeds", "Gold Nugget", "Gold Ingot", "Rose Red", "Orange Dye", "Pink Dye", "Lime Dye",
+        "Purple Dye"
     };
 
     public CraftableItem selectedItem;
