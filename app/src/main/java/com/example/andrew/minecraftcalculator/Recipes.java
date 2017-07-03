@@ -40,7 +40,8 @@ public class Recipes extends AppCompatActivity {
         "Compass", "Lead", "Sword", "Helmet", "Chestplate", "Leggings", "Boots", "Bow", "Shield", "Arrow",
         "Spectral Arrow", "Tipped Arrow", "Wheat", "Bowl", "Sugar", "Leather", "Dandelion Yellow", "Gray Dye",
         "Pumpkin Seeds", "Gold Nugget", "Gold Ingot", "Rose Red", "Orange Dye", "Pink Dye", "Lime Dye",
-        "Purple Dye"
+        "Purple Dye", "Light Gray Dye", "Magenta Dye", "Light Blue Dye", "Emerald", "Iron Ingot", "Lapis Lazuli",
+        "Bonemeal", "Stick", "Iron Nugget", "Melon Seeds", "Diamond"
     };
 
     public CraftableItem selectedItem;
@@ -52,15 +53,7 @@ public class Recipes extends AppCompatActivity {
     public RecipeFiller populator = new RecipeFiller();
     public Context thisContext;
     public AutoCompleteTextView searchInput;
-    public ImageView r1c1;
-    public ImageView r1c2;
-    public ImageView r1c3;
-    public ImageView r2c1;
-    public ImageView r2c2;
-    public ImageView r2c3;
-    public ImageView r3c1;
-    public ImageView r3c2;
-    public ImageView r3c3;
+    public ImageView r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3;
     public ImageView outputItem;
     public TextView yieldOutput;
     public TextView recipeDescription;
