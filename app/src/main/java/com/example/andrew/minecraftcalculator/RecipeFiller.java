@@ -2418,10 +2418,178 @@ public class RecipeFiller {
                 .yielding(9)
                 .looksLike("@drawable/diamond")
                 .build());
-
-
-
-
+        // ================== Firework Star =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"gunpowder", "light_blue_dye", "feather"},
+                {"glowstone_dust", "diamond", null}
+        };
+        ings = new String[] {"gunpowder", "light_blue_dye", "feather", "glowstone_dust", "diamond"};
+        itemArr.add(new CraftableItem.Builder("Firework Star")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("Firework Star recipes are fairly complex. A basic star (Small Ball explosion) is simply Gunpowder and Dye. Special effects may be achieved via adding the following ingredients: Fire Charge (Large Ball), Gold Nugget (Star Explision), any Head (Creeper face), Feather (Burst), Glowstone Dust (Twinkle/Crackle), Diamond (Trail/Willow). A Fade may be added by combinin an existing star with Dye.")
+                .looksLike("@drawable/firework_star")
+                .build());
+        // ================== Bucket =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"iron_ingot", null, "iron_ingot"},
+                {null, "iron_ingot", null}
+        };
+        ings = new String[] {"iron_ingot"};
+        itemArr.add(new CraftableItem.Builder("Bucket")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/bucket")
+                .build());
+        // ================== Eye of Ender =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"blaze_powder", "ender_pearl", null},
+                {null, null, null}
+        };
+        ings = new String[] {"blaze_powder", "ender_pearl"};
+        itemArr.add(new CraftableItem.Builder("Eye of Ender")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/eye_of_ender")
+                .build());
+        // ================== Book and Quill =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"book", "ink_sac", null},
+                {null, "feather", null}
+        };
+        ings = new String[] {"book", "ink_sac", "feather"};
+        itemArr.add(new CraftableItem.Builder("Book and Quill")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/book_and_quill")
+                .build());
+        // ================== Written Book =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"book_and_quill", "book", null},
+                {null, null, null}
+        };
+        ings = new String[] {"book", "book_and_quill"};
+        itemArr.add(new CraftableItem.Builder("Written Book")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("The yield of this recipe can be increased by adding more Book and Quills to the recipe, up to 8.")
+                .looksLike("@drawable/book")
+                .build());
+        // ================== Map (Empty) =================== //
+        tempLayout = new String[][] {
+                {"paper", "paper", "paper"},
+                {"paper", "compass", "paper"},
+                {"paper", "paper", "paper"}
+        };
+        ings = new String[] {"compass", "paper"};
+        itemArr.add(new CraftableItem.Builder("Map (Empty)")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/map")
+                .build());
+        // ================== Map (Zoomed Out) =================== //
+        tempLayout = new String[][] {
+                {"paper", "paper", "paper"},
+                {"paper", "map", "paper"},
+                {"paper", "paper", "paper"}
+        };
+        ings = new String[] {"paper", "map"};
+        itemArr.add(new CraftableItem.Builder("Map (Zoomed Out)")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/map")
+                .build());
+        // ================== Fire Charge =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"blaze_powder", "coal", null},
+                {null, "gunpowder", null}
+        };
+        ings = new String[] {"blaze_powder", "coal", "gunpowder"};
+        itemArr.add(new CraftableItem.Builder("Fire Charge")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(1)
+                .describedAs("Fire Charge can also be created using charcoal instead of coal.")
+                .looksLike("@drawable/fire_charge")
+                .build());
+        // ================== Beacon =================== //
+        tempLayout = new String[][] {
+                {"glass", "glass", "glass"},
+                {"glass", "nether_star", "glass"},
+                {"obsidian", "obsidian", "obsidian"}
+        };
+        ings = new String[] {"glass", "nether_star", "obsidian"};
+        itemArr.add(new CraftableItem.Builder("Beacon")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/beacon")
+                .build());
+        // ================== Firework Rocket =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"paper", null, null},
+                {"gunpowder", null, null}
+        };
+        ings = new String[] {"nether_star", "obsidian"};
+        itemArr.add(new CraftableItem.Builder("Firework Rocket")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(3)
+                .describedAs("The addition of more gunpowder increases the duration of the rocket (up to 3 gunpowders). You may also Firework Stars (up to 7).")
+                .looksLike("@drawable/firework_rocket")
+                .build());
+        // ================== Paper =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"sugar_cane", "sugar_cane", "sugar_cane"},
+                {null, null, null}
+        };
+        ings = new String[] {"sugar_cane"};
+        itemArr.add(new CraftableItem.Builder("Paper")
+                .withLayout(tempLayout)
+                .ofType("normal")
+                .usingIngredients(ings)
+                .yielding(3)
+                .looksLike("@drawable/paper")
+                .build());
+        // ================== Book =================== //
+        tempLayout = new String[][] {
+                {null, null, null},
+                {"paper", "paper", null},
+                {"paper", "leather", null}
+        };
+        ings = new String[] {"paper", "leather"};
+        itemArr.add(new CraftableItem.Builder("Book")
+                .withLayout(tempLayout)
+                .ofType("shapeless")
+                .usingIngredients(ings)
+                .yielding(1)
+                .looksLike("@drawable/book")
+                .build());
 
         return itemArr;
     }

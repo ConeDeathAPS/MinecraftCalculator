@@ -41,7 +41,9 @@ public class Recipes extends AppCompatActivity {
         "Spectral Arrow", "Tipped Arrow", "Wheat", "Bowl", "Sugar", "Leather", "Dandelion Yellow", "Gray Dye",
         "Pumpkin Seeds", "Gold Nugget", "Gold Ingot", "Rose Red", "Orange Dye", "Pink Dye", "Lime Dye",
         "Purple Dye", "Light Gray Dye", "Magenta Dye", "Light Blue Dye", "Emerald", "Iron Ingot", "Lapis Lazuli",
-        "Bonemeal", "Stick", "Iron Nugget", "Melon Seeds", "Diamond"
+        "Bonemeal", "Stick", "Iron Nugget", "Melon Seeds", "Diamond", "Firework Star", "Bucket", "Eye of Ender",
+        "Book and Quill", "Written Book", "Map (Empty)", "Map (Zoomed Out)", "Fire Charge", "Beacon", "Firework Rocket",
+        "Book", "Paper"
     };
 
     public CraftableItem selectedItem;
