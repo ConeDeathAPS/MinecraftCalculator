@@ -1,20 +1,10 @@
 package com.example.andrew.minecraftcalculator;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.content.Context;
-import android.util.AttributeSet;
 import android.view.View;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.view.SurfaceView;
-import android.view.SurfaceHolder;
 import android.widget.Button;
 import android.widget.TextView;
-
-
-import java.lang.reflect.Array;
 
 public class CircleHelper extends AppCompatActivity {
 

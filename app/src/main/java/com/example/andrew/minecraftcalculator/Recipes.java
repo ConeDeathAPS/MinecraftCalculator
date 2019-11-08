@@ -1,7 +1,7 @@
 package com.example.andrew.minecraftcalculator;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -12,7 +12,6 @@ import android.view.View;
 import android.content.Context;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Recipes extends AppCompatActivity {

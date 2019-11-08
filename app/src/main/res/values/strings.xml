@@ -23,7 +23,7 @@
     <string name="stack_label">Stacks</string>
     <string name="chest_label">Single Chests</string>
     <string name="dchest_label">Double Chests</string>
-    <string name="remainder_label">R:</string>
+    <string name="remainder_label">R</string>
     <string name="stacks_to_label">Stack Base</string>
     <string name="zero">0</string>
     <string name="stack_64">64</string>
@@ -31,7 +31,7 @@
     <string name="items_label">Items</string>
     <string name="stacks_results_label">Number of Stacks</string>
     <string name="items_results_label">Number of Items</string>
-    <string name="item_hint">----</string>
+    <string name="item_hint">Enter a value</string>
     <!--Circle Helper strings-->
     <string name="increment">+</string>
     <string name="decrement">-</string>

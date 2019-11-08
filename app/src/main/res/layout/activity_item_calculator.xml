@@ -20,25 +20,29 @@
         android:text="@string/chest_label"
         android:textSize="25sp"
         android:gravity="center" />
+
     <EditText
         android:id="@+id/dchests_input"
         android:layout_width="170sp"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="40sp"
-        android:text="@string/zero"
+        android:layout_below="@id/dchest_label"
+        android:editable="false"
         android:gravity="center"
-        android:layout_below="@id/dchest_label"/>
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textSize="40sp" />
+
     <EditText
         android:id="@+id/schests_input"
         android:layout_width="170sp"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="40sp"
-        android:text="@string/zero"
-        android:gravity="center"
         android:layout_below="@id/schest_label"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:editable="false"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textSize="40sp" />
     <TextView
         android:id="@+id/stack_label"
         android:layout_width="170sp"
@@ -67,24 +71,26 @@
         android:layout_below="@id/stack_label"
         android:layout_alignParentRight="true"
         android:background="@color/colorPrimary"/>
+
     <EditText
-        android:id="@+id/stacks_input"
+        android:id="@+id/stacksOutput"
         android:layout_width="80sp"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="40sp"
-        android:text="@string/zero"
+        android:layout_below="@id/stack_label"
+        android:editable="false"
         android:gravity="center"
-        android:layout_below="@id/stack_label" />
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textSize="40sp" />
     <TextView
         android:id="@+id/remainder_label"
         android:layout_width="26sp"
         android:layout_height="wrap_content"
         android:text="@string/remainder_label"
         android:textSize="30sp"
-        android:layout_toRightOf="@id/stacks_input"
+        android:layout_toRightOf="@id/stacksOutput"
         android:layout_below="@id/stack_label"
-        android:layout_alignBottom="@id/stacks_input"
+        android:layout_alignBottom="@id/stacksOutput"
         android:gravity="center"/>
     <TextView
         android:id="@+id/stack_remainder"
@@ -95,7 +101,7 @@
         android:textSize="40sp"
         android:gravity="center"
         android:layout_below="@id/stack_label"
-        android:layout_alignBottom="@id/stacks_input"
+        android:layout_alignBottom="@id/stacksOutput"
         android:layout_toRightOf="@id/remainder_label"/>
     <TextView
         android:id="@+id/items_results_label"
@@ -104,37 +110,45 @@
         android:text="@string/items_results_label"
         android:textSize="35sp"
         android:gravity="center"
-        android:layout_below="@id/stacks_input"/>
+        android:layout_below="@id/stacksOutput"/>
+
     <EditText
-        android:id="@+id/items_results_field"
+        android:id="@+id/itemsInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/items_results_label"
+        android:editable="true"
+        android:gravity="center"
+        android:hint="@string/item_hint"
         android:inputType="number"
         android:text="@string/zero"
-        android:textSize="40sp"
         android:textColor="@color/colorAccent"
-        android:gravity="center"
-        android:layout_below="@id/items_results_label"/>
+        android:textSize="40sp" />
+
     <Button
         android:id="@+id/item_calc_do"
-        android:onClick="performItemCalc"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="66dp"
+        android:layout_below="@id/itemsInput"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="performItemCalc"
         android:text="@string/calc"
-        android:textSize="30sp"
-        android:textColor="#FFFFFF"
         android:textAllCaps="false"
-        android:layout_below="@id/items_results_field"
-        android:background="@color/colorPrimaryDark" />
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
     <Button
         android:id="@+id/item_clear_fields"
-        android:onClick="clearItemFields"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="@string/clear_button"
-        android:textSize="30sp"
-        android:textAllCaps="false"
         android:layout_below="@id/item_calc_do"
         android:layout_marginTop="10dp"
-        android:background="@color/colorPrimary"/>
+        android:background="@android:color/transparent"
+        android:onClick="clearItemFields"
+        android:text="@string/clear_button"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWarn"
+        android:textSize="30sp" />
 </RelativeLayout>
