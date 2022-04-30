@@ -140,28 +140,45 @@
         android:textSize="30sp"
         android:layout_below="@id/lin_results_field"
         android:background="@color/colorPrimaryDark"/>
+
     <Button
-        android:id="@+id/swap_dims"
-        android:onClick="toggleDimensions"
-        android:layout_width="match_parent"
+        android:id="@+id/mode_2d"
+        android:layout_width="180dp"
         android:layout_height="70dp"
         android:layout_below="@id/calc_do"
-        android:text="@string/two_dimension"
-        android:textAllCaps="false"
-        android:textSize="30sp"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorPrimary"/>
+        android:layout_marginRight="5dp"
+        android:background="@color/colorPrimary"
+        android:onClick="toggleMode"
+        android:text="@string/two_dimension"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
+    <Button
+        android:id="@+id/mode_3d"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/calc_do"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/colorPrimary"
+        android:onClick="toggleMode"
+        android:text="@string/three_dimension"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
     <Button
         android:id="@+id/clear_fields"
         android:onClick="clearFields"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@id/swap_dims"
+        android:layout_below="@id/mode_3d"
         android:text="@string/clear_button"
         android:textSize="30sp"
         android:textAllCaps="false"
-        android:background="@color/colorPrimary"/>
+        android:background="@color/colorWarn" />
 
 
 </RelativeLayout>

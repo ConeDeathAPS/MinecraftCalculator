@@ -1,15 +1,15 @@
 <resources>
     <!--Initial app strings-->
     <string name="app_name">Minecraft Calculator</string>
-    <string name="lin_dist">Linear Distance Calculator</string>
+    <string name="lin_dist">Distance Calculator</string>
     <string name="items">Item Calculator</string>
     <string name="circle_maker">Circle Helper</string>
     <string name="recipes">Recipes/Crafting</string>
     <string name="wiki_link">Minecraft Wiki</string>
     <!--Linear Distance strings-->
     <string name="clear_button">Clear Fields</string>
-    <string name="two_dimension">2d Distance</string>
-    <string name="three_dimension">3d Distance</string>
+    <string name="two_dimension">2d</string>
+    <string name="three_dimension">3d</string>
     <string name="calc">Calculate</string>
     <string name="X1label">X1</string>
     <string name="Y1label">Y1</string>

@@ -11,7 +11,7 @@ public class CircleHelper extends AppCompatActivity {
     Button incrementBtn;
     Button decrementBtn;
     TextView radiusDisplay;
-    Integer radius = 10;
+    int radius = 10;
     SquareView thisView;
 
     @Override
@@ -31,13 +31,13 @@ public class CircleHelper extends AppCompatActivity {
 
     public void decrementRadius(View thisView) {
         radius -= 1;
-        radiusDisplay.setText(radius.toString());
+        radiusDisplay.setText(String.valueOf(radius));
         updateRadius(radius);
     }
 
     public void incrementRadius(View thisView) {
         radius += 1;
-        radiusDisplay.setText(radius.toString());
+        radiusDisplay.setText(String.valueOf(radius));
         updateRadius(radius);
     }
 

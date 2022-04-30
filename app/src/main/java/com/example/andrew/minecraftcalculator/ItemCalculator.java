@@ -19,6 +19,11 @@ public class ItemCalculator extends AppCompatActivity {
     TextView stacksRemainder;
     int stackBase = 64;
     EditText itemsInput;
+    int singleChests;
+    int doubleChests;
+    int items;
+    int remainder;
+    int stacks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,31 +37,15 @@ public class ItemCalculator extends AppCompatActivity {
         stacksRemainder = findViewById(R.id.stack_remainder);
     }
 
-    public void toggleStackBase(View view) {
+    public void toggleStackBase() {
         if (stackBase == 64) {
-            Log.i("MinecraftCalculator", "Base state changed to 16");
             stackBase = 16;
         } else if (stackBase == 16) {
-            Log.i("MinecraftCalculator", "Base state changed to 64");
             stackBase = 64;
         }
     }
 
-    public void errorDialog() {
-        AlertDialog errorDialog = new AlertDialog.Builder(ItemCalculator.this).create();
-        errorDialog.setTitle("Whoops!");
-        errorDialog.setMessage("Make sure you provide a value for 'Number of Items'");
-        errorDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        errorDialog.show();
-    }
-
     public void clearItemFields(View view) {
-        Log.i("MinecraftCalculator", "Clearing fields for item calculator");
         sChestOutput.setText("0");
         dChestOutput.setText("0");
         stacksOutput.setText("0");
@@ -66,18 +55,16 @@ public class ItemCalculator extends AppCompatActivity {
 
     public void performItemCalc(View v) {
         //if any of the fields are blank, call the error dialog
-        if (sChestOutput.getText().toString().equals("") || dChestOutput.getText().toString().equals("")
-                || stacksOutput.getText().toString().equals("") || itemsInput.getText().toString().equals("")) {
-            errorDialog();
+        if (itemsInput.getText().toString().isEmpty() || Integer.getInteger(itemsInput.getText().toString()) > 0) {
+            errorDialog("Please provide a positive integer for 'items'.");
         } else {
             int items = Integer.parseInt(itemsInput.getText().toString());
-            Log.i("MinecraftCalculator", "Calculating with item amount " + items);
             final int[] stackCount = itemsToStacks(items);
-            Log.i("MinecraftCalculator", "Stack amount " + stackCount[0] + " r " + stackCount[1]);
-            stacksOutput.setText(String.valueOf(stackCount[0]));
-            stacksRemainder.setText(String.valueOf(stackCount[1]));
-            sChestOutput.setText(String.valueOf(itemsToChests(items, 27)));
-            dChestOutput.setText(String.valueOf(itemsToChests(items, 54)));
+            this.stacks = stackCount[0];
+            this.remainder = stackCount[1];
+            this.singleChests = itemsToChests(items, 27);
+            this.doubleChests = itemsToChests(items, 54);
+            this.updateAllOutputFields();
         }
     }
 
@@ -90,5 +77,23 @@ public class ItemCalculator extends AppCompatActivity {
         return (int) Math.floor((items / stackBase) / chestSize);
     }
 
+    private void updateAllOutputFields() {
+        sChestOutput.setText(String.valueOf(this.singleChests));
+        dChestOutput.setText(String.valueOf(this.doubleChests));
+        stacksOutput.setText(String.valueOf(this.stacks));
+        stacksRemainder.setText(String.valueOf(this.stacks));
+    }
 
+    private void errorDialog(String message) {
+        AlertDialog errorDialog = new AlertDialog.Builder(ItemCalculator.this).create();
+        errorDialog.setTitle("Whoops!");
+        errorDialog.setMessage(message);
+        errorDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        errorDialog.show();
+    }
 }

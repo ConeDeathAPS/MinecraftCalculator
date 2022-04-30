@@ -12,8 +12,13 @@ import android.widget.TextView;
 
 public class LinearDistance extends AppCompatActivity {
 
+    enum Mode {
+        THREE_DIMENSIONS,
+        TWO_DIMENSIONS
+    }
+
     //declare global variables
-    Integer mode = 3;
+    Mode mode = Mode.THREE_DIMENSIONS;
     EditText X1_input;
     EditText Y1_input;
     EditText Z1_input;
@@ -21,7 +26,8 @@ public class LinearDistance extends AppCompatActivity {
     EditText Y2_input;
     EditText Z2_input;
     Button calc_do;
-    Button swapDims;
+    Button mode_2d;
+    Button mode_3d;
     TextView result;
 
     @Override
@@ -35,10 +41,11 @@ public class LinearDistance extends AppCompatActivity {
         X2_input = (EditText) findViewById(R.id.x2_input);
         Y2_input = (EditText) findViewById(R.id.y2_input);
         Z2_input = (EditText) findViewById(R.id.z2_input);
-        swapDims = (Button) findViewById(R.id.swap_dims);
+        mode_2d = (Button) findViewById(R.id.mode_2d);
+        mode_3d = (Button) findViewById(R.id.mode_3d);
         calc_do = (Button) findViewById(R.id.calc_do);
         result = (TextView) findViewById(R.id.lin_results_field);
-
+        mode_3d.setEnabled(false); // disable 3d since we start in that mode
     }
 
     public void errorDialog() {
@@ -55,19 +62,21 @@ public class LinearDistance extends AppCompatActivity {
     }
 
     //Disable y dimension for 2 dimensional measurement
-    public void toggleDimensions(View v) {
-        if (mode == 2) {
+    public void toggleMode(View v) {
+        if (v.getId() == R.id.mode_3d) {
             Log.i("MCProcess", "Changed to 3d distance");
-            swapDims.setText(R.string.two_dimension);
             Y1_input.setEnabled(true);
             Y2_input.setEnabled(true);
-            mode = 3;
-        } else if (mode == 3) {
+            mode = Mode.THREE_DIMENSIONS;
+            mode_3d.setEnabled(false);
+            mode_2d.setEnabled(true);
+        } else if (v.getId() == R.id.mode_2d) {
             Log.i("MCProcess", "Changed to 2d distance");
-            swapDims.setText(R.string.three_dimension);
             Y1_input.setEnabled(false);
             Y2_input.setEnabled(false);
-            mode = 2;
+            mode = Mode.TWO_DIMENSIONS;
+            mode_3d.setEnabled(true);
+            mode_2d.setEnabled(false);
         }
     }
 
@@ -85,13 +94,13 @@ public class LinearDistance extends AppCompatActivity {
         //error checking
         Boolean errors = false;
         //if there are empty fields then set errors to true so calculations are not attempted
-        if (mode == 2) {
+        if (mode.equals(Mode.TWO_DIMENSIONS)) {
             if (X1_input.getText().toString().equals("") || X2_input.getText().toString().equals("") ||
                     Z1_input.getText().toString().equals("") || Z2_input.getText().toString().equals("")) {
                 errors = true;
                 errorDialog();
             }
-        } else if (mode == 3) {
+        } else if (mode.equals(Mode.THREE_DIMENSIONS)) {
             if (X1_input.getText().toString().equals("") || X2_input.getText().toString().equals("") ||
                     Y1_input.getText().toString().equals("") || Y2_input.getText().toString().equals("") ||
                     Z1_input.getText().toString().equals("") || Z2_input.getText().toString().equals("")) {
@@ -107,7 +116,7 @@ public class LinearDistance extends AppCompatActivity {
             Integer X2 = Integer.parseInt(X2_input.getText().toString());
             Integer Z2 = Integer.parseInt(Z2_input.getText().toString());
             String formatted_result;
-            if (mode == 2) {
+            if (mode.equals(Mode.TWO_DIMENSIONS)) {
                 //big scary if statement checking to make sure none of the fields are empty
                 //perform calculation
                 calculated_result = hypotenuse(X1, X2, Z1, Z2);
@@ -115,7 +124,7 @@ public class LinearDistance extends AppCompatActivity {
                 formatted_result = Double.toString(calculated_result);
                 //display the text
                 result.setText(formatted_result);
-            } else if (mode == 3) {
+            } else if (mode.equals(Mode.THREE_DIMENSIONS)) {
                 Integer Y1 = Integer.parseInt(Z1_input.getText().toString());
                 Integer Y2 = Integer.parseInt(Y2_input.getText().toString());
                 //converting the result of the first hypotenuse from a double to an Integer, in order
