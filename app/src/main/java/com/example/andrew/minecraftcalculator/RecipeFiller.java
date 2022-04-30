@@ -10,8 +10,6 @@ import java.util.List;
 
 public class RecipeFiller {
     private List<CraftableItem> itemArr = new ArrayList<CraftableItem>();
-    private String[][] tempLayout;
-    private String[] tempIngs;
 
     public List<CraftableItem> setAllRecipes() {
         // ================================================= //
@@ -19,16 +17,16 @@ public class RecipeFiller {
         // ================================================= //
 
         // ================== Wood Planks =================== //
-        String[][] tempLayout = {
+        String[][] tempLayout = new String[][] {
                 {null, null, null},
                 {null, "oak_log", null},
                 {null, null, null}
         };
-        String[] ings = {"oak_log"};
+        String[] ingredients = {"oak_log"};
         itemArr.add(new CraftableItem.Builder("Wood Planks")
             .withLayout(tempLayout)
             .ofType("shapeless")
-            .usingIngredients(ings)
+            .usingIngredients(ingredients)
             .yielding(4)
             .looksLike("@drawable/oak_wood_plank")
             .describedAs("This recipe is valid for all types of wood.")
@@ -39,11 +37,11 @@ public class RecipeFiller {
                 {null, null, null},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Slab")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .looksLike("@drawable/oak_wood_slab")
                 .describedAs("This recipe is valid for all wood and construction materials.")
@@ -54,11 +52,11 @@ public class RecipeFiller {
                 {"quartz", "quartz", null},
                 {"quartz", "quartz", null}
         };
-        ings = new String[] {"quartz"};
+        ingredients = new String[] {"quartz"};
         itemArr.add(new CraftableItem.Builder("Quartz Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/quartz_block")
                 .build());
@@ -68,11 +66,11 @@ public class RecipeFiller {
                 {null, "quartz_slab", null},
                 {null, "quartz_slab", null}
         };
-        ings = new String[] {"quartz_slab"};
+        ingredients = new String[] {"quartz_slab"};
         itemArr.add(new CraftableItem.Builder("Chiseled Quartz")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/chiseled_quartz")
                 .build());
@@ -82,11 +80,11 @@ public class RecipeFiller {
                 {null, "quartz_block", null},
                 {null, "quartz_block", null}
         };
-        ings = new String[] {"quartz_block"};
+        ingredients = new String[] {"quartz_block"};
         itemArr.add(new CraftableItem.Builder("Chiseled Quartz")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/pillar_quartz")
                 .build());
@@ -96,11 +94,11 @@ public class RecipeFiller {
                 {"diorite", "quartz", null},
                 {null, null, null}
         };
-        ings = new String[] {"quartz", "diorite"};
+        ingredients = new String[] {"quartz", "diorite"};
         itemArr.add(new CraftableItem.Builder("Granite")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/granite")
                 .build());
@@ -110,11 +108,11 @@ public class RecipeFiller {
                 {"granite", "granite", null},
                 {"granite", "granite", null}
         };
-        ings = new String[] {"granite"};
+        ingredients = new String[] {"granite"};
         itemArr.add(new CraftableItem.Builder("Polished Granite")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/polished_granite")
                 .build());
@@ -124,11 +122,11 @@ public class RecipeFiller {
                 {"sand", "sand", null},
                 {"sand", "sand", null}
         };
-        ings = new String[] {"sand"};
+        ingredients = new String[] {"sand"};
         itemArr.add(new CraftableItem.Builder("Sandstone")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/sandstone")
                 .describedAs("This recipe is valid for red sandstone as well.")
@@ -139,11 +137,11 @@ public class RecipeFiller {
                 {"sandstone", "sandstone", null},
                 {"sandstone", "sandstone", null}
         };
-        ings = new String[] {"sandstone"};
+        ingredients = new String[] {"sandstone"};
         itemArr.add(new CraftableItem.Builder("Smooth Sandstone")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/sandstone")
                 .describedAs("This recipe is valid for red sandstone as well.")
@@ -154,11 +152,11 @@ public class RecipeFiller {
                 {null, "sandstone_slab", null},
                 {null, "sandstone_slab", null}
         };
-        ings = new String[] {"sandstone_slab"};
+        ingredients = new String[] {"sandstone_slab"};
         itemArr.add(new CraftableItem.Builder("Chiseled Sandstone")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/sandstone")
                 .describedAs("This recipe is valid for red sandstone as well.")
@@ -169,11 +167,11 @@ public class RecipeFiller {
                 {null, "red_sandstone_slab", null},
                 {null, "red_sandstone_slab", null}
         };
-        ings = new String[] {"red_sandstone_slab"};
+        ingredients = new String[] {"red_sandstone_slab"};
         itemArr.add(new CraftableItem.Builder("Chiseled Red Sandstone")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/chiseled_red_sandstone")
                 .describedAs("This recipe is valid for red sandstone as well.")
@@ -184,11 +182,11 @@ public class RecipeFiller {
                 {"cobblestone", "quartz", null},
                 {"quartz", "cobblestone", null}
         };
-        ings = new String[] {"quartz", "cobblestone"};
+        ingredients = new String[] {"quartz", "cobblestone"};
         itemArr.add(new CraftableItem.Builder("Diorite")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/diorite")
                 .build());
@@ -198,11 +196,11 @@ public class RecipeFiller {
                 {"diorite", "diorite", null},
                 {"diorite", "diorite", null}
         };
-        ings = new String[] {"diorite"};
+        ingredients = new String[] {"diorite"};
         itemArr.add(new CraftableItem.Builder("Polished Diorite")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/polished_diorite")
                 .build());
@@ -212,11 +210,11 @@ public class RecipeFiller {
                 {"diorite", "cobblestone", null},
                 {null, null, null}
         };
-        ings = new String[] {"diorite", "cobblestone"};
+        ingredients = new String[] {"diorite", "cobblestone"};
         itemArr.add(new CraftableItem.Builder("Andesite")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/andesite")
                 .build());
@@ -226,11 +224,11 @@ public class RecipeFiller {
                 {"andesite", "andesite", null},
                 {"andesite", "andesite", null}
         };
-        ings = new String[] {"andesite"};
+        ingredients = new String[] {"andesite"};
         itemArr.add(new CraftableItem.Builder("Polished Andesite")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/polished_andesite")
                 .build());
@@ -240,11 +238,11 @@ public class RecipeFiller {
                 {"gold_ingot", "gold_ingot", "gold_ingot"},
                 {"gold_ingot", "gold_ingot", "gold_ingot"}
         };
-        ings = new String[] {"gold_ingot"};
+        ingredients = new String[] {"gold_ingot"};
         itemArr.add(new CraftableItem.Builder("Block of Gold")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/gold_block")
                 .build());
@@ -254,11 +252,11 @@ public class RecipeFiller {
                 {"iron_ingot", "iron_ingot", "iron_ingot"},
                 {"iron_ingot", "iron_ingot", "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Block of Iron")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/iron_block")
                 .build());
@@ -268,11 +266,11 @@ public class RecipeFiller {
                 {"diamond", "diamond", "diamond"},
                 {"diamond", "diamond", "diamond"}
         };
-        ings = new String[] {"diamond"};
+        ingredients = new String[] {"diamond"};
         itemArr.add(new CraftableItem.Builder("Block of Diamond")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/diamond_block")
                 .build());
@@ -282,11 +280,11 @@ public class RecipeFiller {
                 {"book", "book", "book"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank", "book"};
+        ingredients = new String[] {"oak_wood_plank", "book"};
         itemArr.add(new CraftableItem.Builder("Bookshelf")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/bookshelf")
                 .describedAs("This recipe accepts all types of wood.")
@@ -297,11 +295,11 @@ public class RecipeFiller {
                 {"snow_ball", "snow_ball", null},
                 {"snow_ball", "snow_ball", null}
         };
-        ings = new String[] {"snow_ball"};
+        ingredients = new String[] {"snow_ball"};
         itemArr.add(new CraftableItem.Builder("Snow Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/snow_block")
                 .build());
@@ -311,11 +309,11 @@ public class RecipeFiller {
                 {"clay_ball", "clay_ball", null},
                 {"clay_ball", "clay_ball", null}
         };
-        ings = new String[] {"clay_ball"};
+        ingredients = new String[] {"clay_ball"};
         itemArr.add(new CraftableItem.Builder("Clay Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/clay_block")
                 .build());
@@ -325,11 +323,11 @@ public class RecipeFiller {
                 {null, "pumpkin", null},
                 {null, "torch", null}
         };
-        ings = new String[] {"pumpkin", "torch"};
+        ingredients = new String[] {"pumpkin", "torch"};
         itemArr.add(new CraftableItem.Builder("Jack o'Lantern")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/jack_o_lantern")
                 .build());
@@ -339,11 +337,11 @@ public class RecipeFiller {
                 {"glowstone_dust", "glowstone_dust", null},
                 {"glowstone_dust", "glowstone_dust", null}
         };
-        ings = new String[] {"glowstone_dust"};
+        ingredients = new String[] {"glowstone_dust"};
         itemArr.add(new CraftableItem.Builder("Glowstone")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/glowstone")
                 .build());
@@ -353,11 +351,11 @@ public class RecipeFiller {
                 {"lapis", "lapis", "lapis"},
                 {"lapis", "lapis", "lapis"}
         };
-        ings = new String[] {"lapis"};
+        ingredients = new String[] {"lapis"};
         itemArr.add(new CraftableItem.Builder("Block of Lapis Lazuli")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/lapis_block")
                 .build());
@@ -367,11 +365,11 @@ public class RecipeFiller {
                 {"melon_slice", "melon_slice", "melon_slice"},
                 {"melon_slice", "melon_slice", "melon_slice"}
         };
-        ings = new String[] {"melon_slice"};
+        ingredients = new String[] {"melon_slice"};
         itemArr.add(new CraftableItem.Builder("Melon")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/melon")
                 .build());
@@ -381,11 +379,11 @@ public class RecipeFiller {
                 {"cobblestone", "vines", null},
                 {null, null, null}
         };
-        ings = new String[] {"cobblestone", "vines"};
+        ingredients = new String[] {"cobblestone", "vines"};
         itemArr.add(new CraftableItem.Builder("Mossy Cobblestone")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/mossy_cobblestone")
                 .build());
@@ -395,11 +393,11 @@ public class RecipeFiller {
                 {"emerald", "emerald", "emerald"},
                 {"emerald", "emerald", "emerald"}
         };
-        ings = new String[] {"emerald"};
+        ingredients = new String[] {"emerald"};
         itemArr.add(new CraftableItem.Builder("Block of Emerald")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/emerald_block")
                 .build());
@@ -409,11 +407,11 @@ public class RecipeFiller {
                 {"glass", "light_blue_dye", "glass"},
                 {"glass", "glass", "glass"}
         };
-        ings = new String[] {"glass", "light_blue_dye"};
+        ingredients = new String[] {"glass", "light_blue_dye"};
         itemArr.add(new CraftableItem.Builder("Stained Glass")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(8)
                 .looksLike("@drawable/light_blue_stained_glass")
                 .describedAs("This recipe is valid for all colors of dye.")
@@ -424,11 +422,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "oak_wood_plank", null},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plans"};
+        ingredients = new String[] {"oak_wood_plans"};
         itemArr.add(new CraftableItem.Builder("Stairs")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/oak_wood_stairs")
                 .describedAs("This recipe is valid for all wood and construction materials.")
@@ -439,11 +437,11 @@ public class RecipeFiller {
                 {"stone_brick", "vines", null},
                 {null, null, null}
         };
-        ings = new String[] {"stone_brick", "vines"};
+        ingredients = new String[] {"stone_brick", "vines"};
         itemArr.add(new CraftableItem.Builder("Mossy Stone Bricks")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/mossy_stone_brick")
                 .build());
@@ -453,11 +451,11 @@ public class RecipeFiller {
                 {"stone", "stone", null},
                 {"stone", "stone", null}
         };
-        ings = new String[] {"stone_brick"};
+        ingredients = new String[] {"stone_brick"};
         itemArr.add(new CraftableItem.Builder("Stone Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/stone_brick")
                 .build());
@@ -467,11 +465,11 @@ public class RecipeFiller {
                 {null, "stone_brick_slab", null},
                 {null, "stone_brick_slab", null}
         };
-        ings = new String[] {"stone_brick_slab"};
+        ingredients = new String[] {"stone_brick_slab"};
         itemArr.add(new CraftableItem.Builder("Chiseled Stone Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/chiseled_stone_brick")
                 .build());
@@ -481,11 +479,11 @@ public class RecipeFiller {
                 {"nether_brick", "nether_brick", null},
                 {"nether_brick", "nether_brick", null}
         };
-        ings = new String[] {"nether_brick"};
+        ingredients = new String[] {"nether_brick"};
         itemArr.add(new CraftableItem.Builder("Nether Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/nether_bricks")
                 .build());
@@ -495,11 +493,11 @@ public class RecipeFiller {
                 {"nether_wart", "nether_brick", null},
                 {"nether_brick", "nether_wart", null}
         };
-        ings = new String[] {"nether_brick", "nether_wart"};
+        ingredients = new String[] {"nether_brick", "nether_wart"};
         itemArr.add(new CraftableItem.Builder("Red Nether Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/red_nether_bricks")
                 .build());
@@ -509,11 +507,11 @@ public class RecipeFiller {
                 {"wheat", "wheat", "wheat"},
                 {"wheat", "wheat", "wheat"}
         };
-        ings = new String[] {"wheat"};
+        ingredients = new String[] {"wheat"};
         itemArr.add(new CraftableItem.Builder("Hay Bale")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/hay_bale")
                 .build());
@@ -523,11 +521,11 @@ public class RecipeFiller {
                 {"hardened_clay", "light_blue_dye", "hardened_clay"},
                 {"hardened_clay", "hardened_clay", "hardened_clay"}
         };
-        ings = new String[] {"hardened_clay", "light_blue_dye"};
+        ingredients = new String[] {"hardened_clay", "light_blue_dye"};
         itemArr.add(new CraftableItem.Builder("Stained Clay")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(8)
                 .describedAs("This recipe is valid for all colors of dye")
                 .looksLike("@drawable/light_blue_hardened_clay")
@@ -538,11 +536,11 @@ public class RecipeFiller {
                 {"coal", "coal", "coal"},
                 {"coal", "coal", "coal"}
         };
-        ings = new String[] {"coal"};
+        ingredients = new String[] {"coal"};
         itemArr.add(new CraftableItem.Builder("Block of Coal")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/coal_block")
                 .build());
@@ -552,11 +550,11 @@ public class RecipeFiller {
                 {"prismarine_shard", "prismarine_shard", null},
                 {"prismarine_shard", "prismarine_shard", null}
         };
-        ings = new String[] {"prismarine_shard"};
+        ingredients = new String[] {"prismarine_shard"};
         itemArr.add(new CraftableItem.Builder("Prismarine")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/prismarine")
                 .build());
@@ -566,11 +564,11 @@ public class RecipeFiller {
                 {"prismarine_shard", "prismarine_shard", "prismarine_shard"},
                 {"prismarine_shard", "prismarine_shard", "prismarine_shard"}
         };
-        ings = new String[] {"prismarine_shard"};
+        ingredients = new String[] {"prismarine_shard"};
         itemArr.add(new CraftableItem.Builder("Prismarine Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/prismarine_bricks")
                 .build());
@@ -580,11 +578,11 @@ public class RecipeFiller {
                 {"prismarine_shard", "ink_sac", "prismarine_shard"},
                 {"prismarine_shard", "prismarine_shard", "prismarine_shard"}
         };
-        ings = new String[] {"prismarine_shard", "ink_sac"};
+        ingredients = new String[] {"prismarine_shard", "ink_sac"};
         itemArr.add(new CraftableItem.Builder("Dark Prismarine")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/dark_prismarine")
                 .build());
@@ -594,11 +592,11 @@ public class RecipeFiller {
                 {"dirt", "gravel", null},
                 {"gravel", "dirt", null}
         };
-        ings = new String[] {"dirt", "gravel"};
+        ingredients = new String[] {"dirt", "gravel"};
         itemArr.add(new CraftableItem.Builder("Coarse Dirt")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/coarse_dirt")
                 .build());
@@ -608,11 +606,11 @@ public class RecipeFiller {
                 {"brick", "brick", null},
                 {"brick", "brick", null}
         };
-        ings = new String[] {"brick"};
+        ingredients = new String[] {"brick"};
         itemArr.add(new CraftableItem.Builder("Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/bricks")
                 .build());
@@ -622,11 +620,11 @@ public class RecipeFiller {
                 {"popped_chorus_fruit", "popped_chorus_fruit", null},
                 {"popped_chorus_fruit", "popped_chorus_fruit", null}
         };
-        ings = new String[] {"popped_chorus_fruit"};
+        ingredients = new String[] {"popped_chorus_fruit"};
         itemArr.add(new CraftableItem.Builder("Purpur Bricks")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/purpur_bricks")
                 .build());
@@ -636,11 +634,11 @@ public class RecipeFiller {
                 {null, "purpur_slab", null},
                 {null, "purpur_slab", null}
         };
-        ings = new String[] {"purpur_slabr"};
+        ingredients = new String[] {"purpur_slabr"};
         itemArr.add(new CraftableItem.Builder("Purpur Pillar")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/purpur_pillar")
                 .build());
@@ -650,11 +648,11 @@ public class RecipeFiller {
                 {"magma_cream", "magma_cream", null},
                 {"magma_cream", "magma_cream", null}
         };
-        ings = new String[] {"magma_cream"};
+        ingredients = new String[] {"magma_cream"};
         itemArr.add(new CraftableItem.Builder("Magma Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/magma_block")
                 .build());
@@ -664,11 +662,11 @@ public class RecipeFiller {
                 {"bonemeal", "bonemeal", "bonemeal"},
                 {"bonemeal", "bonemeal", "bonemeal"}
         };
-        ings = new String[] {"bonemeal"};
+        ingredients = new String[] {"bonemeal"};
         itemArr.add(new CraftableItem.Builder("Bone Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/bone_block")
                 .build());
@@ -678,11 +676,11 @@ public class RecipeFiller {
                 {"nether_wart", "nether_wart", "nether_wart"},
                 {"nether_wart", "nether_wart", "nether_wart"}
         };
-        ings = new String[] {"nether_wart"};
+        ingredients = new String[] {"nether_wart"};
         itemArr.add(new CraftableItem.Builder("Nether Wart Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/nether_wart_block")
                 .build());
@@ -692,11 +690,11 @@ public class RecipeFiller {
                 {"string", "string", null},
                 {"string", "string", null}
         };
-        ings = new String[] {"string"};
+        ingredients = new String[] {"string"};
         itemArr.add(new CraftableItem.Builder("Wool")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/wool")
                 .build());
@@ -706,11 +704,11 @@ public class RecipeFiller {
                 {"wool", "light_blue_dye", null},
                 {null, null, null}
         };
-        ings = new String[] {"wool", "light_blue_dye"};
+        ingredients = new String[] {"wool", "light_blue_dye"};
         itemArr.add(new CraftableItem.Builder("Dyed Wool")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all colors of dye.")
                 .looksLike("@drawable/light_blue_wool")
@@ -721,11 +719,11 @@ public class RecipeFiller {
                 {"prismarine_crystals", "prismarine_crystals", "prismarine_crystals"},
                 {"prismarine_shard", "prismarine_crystals", "prismarine_shard"}
         };
-        ings = new String[] {"prismarine_shard", "prismarine_crystals"};
+        ingredients = new String[] {"prismarine_shard", "prismarine_crystals"};
         itemArr.add(new CraftableItem.Builder("Sea Lantern")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/sea_lantern")
                 .build());
@@ -739,11 +737,11 @@ public class RecipeFiller {
                 {"diamond", "obsidian", "diamond"},
                 {"obsidian", "obsidian", "obsidian"}
         };
-        ings = new String[] {"diamond", "obsidian", "book"};
+        ingredients = new String[] {"diamond", "obsidian", "book"};
         itemArr.add(new CraftableItem.Builder("Enchanting Table")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/enchanting_table")
                 .build());
@@ -753,11 +751,11 @@ public class RecipeFiller {
                 {"stick", "light_blue_wool", "stick"},
                 {"stick", "stick", "stick"}
         };
-        ings = new String[] {"stick", "light_blue_wool"};
+        ingredients = new String[] {"stick", "light_blue_wool"};
         itemArr.add(new CraftableItem.Builder("Painting")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/painting")
                 .build());
@@ -767,11 +765,11 @@ public class RecipeFiller {
                 {null, "coal", null},
                 {null, "stick", null}
         };
-        ings = new String[] {"stick", "light_blue_wool"};
+        ingredients = new String[] {"stick", "light_blue_wool"};
         itemArr.add(new CraftableItem.Builder("Torch")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .describedAs("This recipe is valid for both coal and charcoal.")
                 .looksLike("@drawable/torch")
@@ -782,11 +780,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "oak_wood_plank", null},
                 {"oak_wood_plank", "oak_wood_plank", null}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Crafting Table")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for any type of wood.")
                 .looksLike("@drawable/crafting_table")
@@ -797,11 +795,11 @@ public class RecipeFiller {
                 {"stick", "stick", "stick"},
                 {"stick", null, "stick"}
         };
-        ings = new String[] {"stick"};
+        ingredients = new String[] {"stick"};
         itemArr.add(new CraftableItem.Builder("Ladder")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is valid for any type of wood.")
                 .looksLike("@drawable/ladder")
@@ -812,11 +810,11 @@ public class RecipeFiller {
                 {null, null, null},
                 {"snow_block", "snow_block", "snow_block"}
         };
-        ings = new String[] {"snow_block"};
+        ingredients = new String[] {"snow_block"};
         itemArr.add(new CraftableItem.Builder("Snow")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .looksLike("@drawable/snow")
                 .build());
@@ -826,11 +824,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "diamond", "oak_wood_plank"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank", "diamond"};
+        ingredients = new String[] {"oak_wood_plank", "diamond"};
         itemArr.add(new CraftableItem.Builder("Jukebox")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for any type of wood.")
                 .looksLike("@drawable/jukebox")
@@ -841,11 +839,11 @@ public class RecipeFiller {
                 {"iron_ingot", "iron_ingot", "iron_ingot"},
                 {"iron_ingot", "iron_ingot", "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Iron Bars")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(16)
                 .looksLike("@drawable/iron_bars")
                 .build());
@@ -855,11 +853,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "stick", "oak_wood_plank"},
                 {"oak_wood_plank", "stick", "oak_wood_plank"}
         };
-        ings = new String[] {"stick", "oak_wood_plank"};
+        ingredients = new String[] {"stick", "oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Wood Fence")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is valid for all types of wood.")
                 .looksLike("@drawable/oak_fence")
@@ -870,11 +868,11 @@ public class RecipeFiller {
                 {"nether_brick", "nether_brick", "nether_brick"},
                 {"nether_brick", "nether_brick", "nether_brick"}
         };
-        ings = new String[] {"nether_brick"};
+        ingredients = new String[] {"nether_brick"};
         itemArr.add(new CraftableItem.Builder("Nether Brick Fence")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .looksLike("@drawable/nether_brick_fence")
                 .build());
@@ -884,11 +882,11 @@ public class RecipeFiller {
                 {"glass", "glass", "glass"},
                 {"glass", "glass", "glass"}
         };
-        ings = new String[] {"glass"};
+        ingredients = new String[] {"glass"};
         itemArr.add(new CraftableItem.Builder("Glass Pane")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(16)
                 .describedAs("This recipe is valid for all colors of glass.")
                 .looksLike("@drawable/glass_pane")
@@ -899,11 +897,11 @@ public class RecipeFiller {
                 {"glass", "eye_of_ender", "glass"},
                 {"glass", "ghast_tear", "glass"}
         };
-        ings = new String[] {"glass", "eye_of_ender", "ghast_tear"};
+        ingredients = new String[] {"glass", "eye_of_ender", "ghast_tear"};
         itemArr.add(new CraftableItem.Builder("End Crystal")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/end_crystal")
                 .build());
@@ -913,11 +911,11 @@ public class RecipeFiller {
                 {"obsidian", "eye_of_ender", "obsidian"},
                 {"obsidian", "obsidian", "obsidian"}
         };
-        ings = new String[] {"obsidian", "eye_of_ender"};
+        ingredients = new String[] {"obsidian", "eye_of_ender"};
         itemArr.add(new CraftableItem.Builder("Ender Chest")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/ender_chest")
                 .build());
@@ -927,11 +925,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", null, "oak_wood_plank"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Chest")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood.")
                 .looksLike("@drawable/chest") //This image has a white background for some reason
@@ -942,11 +940,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"},
                 {null, "stick", null}
         };
-        ings = new String[] {"oak_wood_plank", "stick"};
+        ingredients = new String[] {"oak_wood_plank", "stick"};
         itemArr.add(new CraftableItem.Builder("Sign")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is valid for all types of wood.")
                 .looksLike("@drawable/sign")
@@ -957,11 +955,11 @@ public class RecipeFiller {
                 {"stick", "leather", "stick"},
                 {"stick", "stick", "stick"}
         };
-        ings = new String[] {"leather", "stick"};
+        ingredients = new String[] {"leather", "stick"};
         itemArr.add(new CraftableItem.Builder("Item Frame")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/item_frame")
                 .build());
@@ -971,11 +969,11 @@ public class RecipeFiller {
                 {"cobblestone", "cobblestone", "cobblestone"},
                 {"cobblestone", "cobblestone", "cobblestone"}
         };
-        ings = new String[] {"cobblestone"};
+        ingredients = new String[] {"cobblestone"};
         itemArr.add(new CraftableItem.Builder("Cobblestone Wall")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .describedAs("This recipe is valid for mossy cobblestone as well.")
                 .looksLike("@drawable/cobblestone_fence")
@@ -986,11 +984,11 @@ public class RecipeFiller {
                 {"brick", null, "brick"},
                 {null, "brick", null}
         };
-        ings = new String[] {"brick"};
+        ingredients = new String[] {"brick"};
         itemArr.add(new CraftableItem.Builder("Flower Pot")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/flower_pot")
                 .build());
@@ -1000,11 +998,11 @@ public class RecipeFiller {
                 {null, "tripwire_hook", "chest"},
                 {null, null, null}
         };
-        ings = new String[] {"chest", "tripwire_hook"};
+        ingredients = new String[] {"chest", "tripwire_hook"};
         itemArr.add(new CraftableItem.Builder("Trapped Chest")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/trapped_chest")
                 .build());
@@ -1014,11 +1012,11 @@ public class RecipeFiller {
                 {"wool", "wool", "wool"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank", "wool"};
+        ingredients = new String[] {"oak_wood_plank", "wool"};
         itemArr.add(new CraftableItem.Builder("Bed")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for any type of wood and any color of wool.")
                 .looksLike("@drawable/bed")
@@ -1029,11 +1027,11 @@ public class RecipeFiller {
                 {"slime_ball", "slime_ball", "slime_ball"},
                 {"slime_ball", "slime_ball", "slime_ball"}
         };
-        ings = new String[] {"slime_ball"};
+        ingredients = new String[] {"slime_ball"};
         itemArr.add(new CraftableItem.Builder("Slime Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/slime_block")
                 .build());
@@ -1043,11 +1041,11 @@ public class RecipeFiller {
                 {null, "stick", null},
                 {"stick", "stone_slab", "stick"}
         };
-        ings = new String[] {"stick", "stone_slab"};
+        ingredients = new String[] {"stick", "stone_slab"};
         itemArr.add(new CraftableItem.Builder("Armor Stand")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/armor_stand")
                 .build());
@@ -1057,11 +1055,11 @@ public class RecipeFiller {
                 {"cobblestone", null, "cobblestone"},
                 {"cobblestone", "cobblestone", "cobblestone"}
         };
-        ings = new String[] {"cobblestone"};
+        ingredients = new String[] {"cobblestone"};
         itemArr.add(new CraftableItem.Builder("Furnace")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/furnace")
                 .build());
@@ -1071,11 +1069,11 @@ public class RecipeFiller {
                 {null, null, null},
                 {"wool", "wool", null}
         };
-        ings = new String[] {"wool"};
+        ingredients = new String[] {"wool"};
         itemArr.add(new CraftableItem.Builder("Carpet")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is valid for all colors of wool.")
                 .looksLike("@drawable/carpet")
@@ -1086,11 +1084,11 @@ public class RecipeFiller {
                 {null, "iron_ingot", null},
                 {"iron_ingot", "iron_ingot", "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Anvil")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/anvil")
                 .build());
@@ -1100,11 +1098,11 @@ public class RecipeFiller {
                 {null, "blaze_rod", null},
                 {null, "popped_chorus_fruit", null}
         };
-        ings = new String[] {"blaze_rod", "popped_chorus_fruit"};
+        ingredients = new String[] {"blaze_rod", "popped_chorus_fruit"};
         itemArr.add(new CraftableItem.Builder("End Rod")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/end_rod")
                 .build());
@@ -1114,11 +1112,11 @@ public class RecipeFiller {
                 {null, "chest", null},
                 {null, "shulker_shell", null}
         };
-        ings = new String[] {"chest", "shulker_shell"};
+        ingredients = new String[] {"chest", "shulker_shell"};
         itemArr.add(new CraftableItem.Builder("Shulker Box")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/purple_shulker_box")
                 .build());
@@ -1128,11 +1126,11 @@ public class RecipeFiller {
                 {"purple_shulker_box", "light_blue_dye", null},
                 {null, null, null}
         };
-        ings = new String[] {"purple_shulker_box", "light_blue_dye"};
+        ingredients = new String[] {"purple_shulker_box", "light_blue_dye"};
         itemArr.add(new CraftableItem.Builder("Colored Shulker Box")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all colors of dye.")
                 .looksLike("@drawable/light_blue_shulker_box")
@@ -1143,11 +1141,11 @@ public class RecipeFiller {
                 {"wool", "wool", "wool"},
                 {null, "stick", null}
         };
-        ings = new String[] {"wool", "stick"};
+        ingredients = new String[] {"wool", "stick"};
         itemArr.add(new CraftableItem.Builder("Banner")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all colors of wool. To copy a banner, place the original and another banner of the same base color in the crafting interface.")
                 .looksLike("@drawable/banner")
@@ -1162,11 +1160,11 @@ public class RecipeFiller {
                 {null, "stick", null},
                 {null, "cobblestone", null}
         };
-        ings = new String[] {"cobblestone", "stick"};
+        ingredients = new String[] {"cobblestone", "stick"};
         itemArr.add(new CraftableItem.Builder("Lever")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/lever")
                 .build());
@@ -1176,11 +1174,11 @@ public class RecipeFiller {
                 {null, "stone", null},
                 {null, null, null}
         };
-        ings = new String[] {"stone"};
+        ingredients = new String[] {"stone"};
         itemArr.add(new CraftableItem.Builder("Button")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood as well.")
                 .looksLike("@drawable/stone_button")
@@ -1191,11 +1189,11 @@ public class RecipeFiller {
                 {"stone", "stone", null},
                 {null, null, null}
         };
-        ings = new String[] {"stone"};
+        ingredients = new String[] {"stone"};
         itemArr.add(new CraftableItem.Builder("Pressure Plate")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood as well. Note: A Stone plate is activated only by mobs, while a wooden one is also activated by items and provides signal for >1 second.")
                 .looksLike("@drawable/stone_pressure_plate")
@@ -1206,11 +1204,11 @@ public class RecipeFiller {
                 {null, "redstone_dust", null},
                 {null, "stick", null}
         };
-        ings = new String[] {"stick"};
+        ingredients = new String[] {"stick"};
         itemArr.add(new CraftableItem.Builder("Redstone Torch")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/redstone_torch")
                 .build());
@@ -1220,11 +1218,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "redstone_dust", "oak_wood_plank"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Note Block")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood.")
                 .looksLike("@drawable/note_block")
@@ -1235,11 +1233,11 @@ public class RecipeFiller {
                 {"stick", "oak_wood_plank", "stick"},
                 {"stick", "oak_wood_plank", "stick"}
         };
-        ings = new String[] {"oak_wood_plank", "stick"};
+        ingredients = new String[] {"oak_wood_plank", "stick"};
         itemArr.add(new CraftableItem.Builder("Fence Gate")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood. This gate can also be opened via a redstone pulse.")
                 .looksLike("@drawable/fence_gate")
@@ -1250,11 +1248,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Trapdoor")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is valid for Iron and all types of wood. This trapdoor can also be opened via a redstone pulse.")
                 .looksLike("@drawable/trapdoor")
@@ -1265,11 +1263,11 @@ public class RecipeFiller {
                 {"redstone_dust", "redstone_dust", "redstone_dust"},
                 {"redstone_dust", "redstone_dust", "redstone_dust"}
         };
-        ings = new String[] {"redstone_dust"};
+        ingredients = new String[] {"redstone_dust"};
         itemArr.add(new CraftableItem.Builder("Redstone Dust")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/redstone_dust")
                 .build());
@@ -1279,11 +1277,11 @@ public class RecipeFiller {
                 {"iron_ingot", "iron_ingot", null},
                 {null, null, null}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Weighted Pressure Plate (Heavy)")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/weighted_pressure_plate_heavy")
                 .build());
@@ -1293,11 +1291,11 @@ public class RecipeFiller {
                 {"gold_ingot", "gold_ingot", null},
                 {null, null, null}
         };
-        ings = new String[] {"gold_ingot"};
+        ingredients = new String[] {"gold_ingot"};
         itemArr.add(new CraftableItem.Builder("Weighted Pressure Plate (Light)")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/weighted_pressure_plate_light")
                 .build());
@@ -1307,11 +1305,11 @@ public class RecipeFiller {
                 {"redstone_torch", "redstone_dust", "redstone_torch"},
                 {"stone", "stone", "stone"}
         };
-        ings = new String[] {"stone", "redstone_dust", "redstone_torch"};
+        ingredients = new String[] {"stone", "redstone_dust", "redstone_torch"};
         itemArr.add(new CraftableItem.Builder("Redstone Repeater")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/repeater")
                 .build());
@@ -1321,11 +1319,11 @@ public class RecipeFiller {
                 {"iron_ingot", "chest", "iron_ingot"},
                 {null, "iron_ingot", null}
         };
-        ings = new String[] {"iron_ingot", "chest"};
+        ingredients = new String[] {"iron_ingot", "chest"};
         itemArr.add(new CraftableItem.Builder("Hopper")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/hopper")
                 .build());
@@ -1335,11 +1333,11 @@ public class RecipeFiller {
                 {"redstone_dust", "glowstone", "redstone_dust"},
                 {null, "redstone_dust", null}
         };
-        ings = new String[] {"glowstone", "redstone_dust"};
+        ingredients = new String[] {"glowstone", "redstone_dust"};
         itemArr.add(new CraftableItem.Builder("Redstone Lamp")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/redstone_lamp")
                 .build());
@@ -1349,11 +1347,11 @@ public class RecipeFiller {
                 {"quartz", "quartz", "quartz"},
                 {"oak_wood_slab", "oak_wood_slab", "oak_wood_slab"}
         };
-        ings = new String[] {"glass", "quartz", "oak_wood_slab"};
+        ingredients = new String[] {"glass", "quartz", "oak_wood_slab"};
         itemArr.add(new CraftableItem.Builder("Daylight Sensor")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood.")
                 .looksLike("@drawable/daylight_sensor")
@@ -1364,11 +1362,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "oak_wood_plank", null},
                 {"oak_wood_plank", "oak_wood_plank", null}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Door")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is valid for Iron and all types of wood. Note: Doors can be opened via a redstone pulse.")
                 .looksLike("@drawable/oak_wood_door")
@@ -1379,11 +1377,11 @@ public class RecipeFiller {
                 {"cobblestone", "bow", "cobblestone"},
                 {"cobblestone", "redstone_dust", "cobblestone"}
         };
-        ings = new String[] {"cobblestone", "bow", "redstone_dust"};
+        ingredients = new String[] {"cobblestone", "bow", "redstone_dust"};
         itemArr.add(new CraftableItem.Builder("Dispenser")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/dispenser")
                 .build());
@@ -1393,11 +1391,11 @@ public class RecipeFiller {
                 {"cobblestone", "iron_ingot", "cobblestone"},
                 {"cobblestone", "redstone_dust", "cobblestone"}
         };
-        ings = new String[] {"oak_wood_plank", "iron_ingot", "redstone_dust", "cobblestone"};
+        ingredients = new String[] {"oak_wood_plank", "iron_ingot", "redstone_dust", "cobblestone"};
         itemArr.add(new CraftableItem.Builder("Piston")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/piston")
                 .build());
@@ -1407,11 +1405,11 @@ public class RecipeFiller {
                 {null, "slime_ball", null},
                 {null, "piston", null}
         };
-        ings = new String[] {"slime_ball", "piston"};
+        ingredients = new String[] {"slime_ball", "piston"};
         itemArr.add(new CraftableItem.Builder("Sticky Piston")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/sticky_piston")
                 .build());
@@ -1421,11 +1419,11 @@ public class RecipeFiller {
                 {"redstone_torch", "quartz", "redstone_torch"},
                 {"stone", "stone", "stone"}
         };
-        ings = new String[] {"redstone_torch", "piston", "stone"};
+        ingredients = new String[] {"redstone_torch", "piston", "stone"};
         itemArr.add(new CraftableItem.Builder("Comparator")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/comparator")
                 .build());
@@ -1435,11 +1433,11 @@ public class RecipeFiller {
                 {"sand", "gunpowder", "sand"},
                 {"gunpowder", "sand", "gunpowder"}
         };
-        ings = new String[] {"gunpowder", "sand"};
+        ingredients = new String[] {"gunpowder", "sand"};
         itemArr.add(new CraftableItem.Builder("TNT")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for red sand as well.")
                 .looksLike("@drawable/tnt")
@@ -1450,11 +1448,11 @@ public class RecipeFiller {
                 {"redstone_dust", "redstone_dust", "quartz"},
                 {"cobblestone", "cobblestone", "cobblestone"}
         };
-        ings = new String[] {"cobblestone", "redstone_dust", "quartz"};
+        ingredients = new String[] {"cobblestone", "redstone_dust", "quartz"};
         itemArr.add(new CraftableItem.Builder("Observer")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/observer")
                 .build());
@@ -1468,11 +1466,11 @@ public class RecipeFiller {
                 {"fishing_rod", null, null},
                 {null, "carrot", null}
         };
-        ings = new String[] {"fishing_rod", "carrot"};
+        ingredients = new String[] {"fishing_rod", "carrot"};
         itemArr.add(new CraftableItem.Builder("Carrot on a Stick")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/carrot_on_stick")
                 .build());
@@ -1482,11 +1480,11 @@ public class RecipeFiller {
                 {"iron_ingot", "stick", "iron_ingot"},
                 {"iron_ingot", null, "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot", "stick"};
+        ingredients = new String[] {"iron_ingot", "stick"};
         itemArr.add(new CraftableItem.Builder("Rail")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(16)
                 .looksLike("@drawable/rail")
                 .build());
@@ -1496,11 +1494,11 @@ public class RecipeFiller {
                 {null, "chest", null},
                 {null, "minecart", null}
         };
-        ings = new String[] {"chest", "minecart"};
+        ingredients = new String[] {"chest", "minecart"};
         itemArr.add(new CraftableItem.Builder("Minecart with Chest")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/minecart_with_chest")
                 .build());
@@ -1510,11 +1508,11 @@ public class RecipeFiller {
                 {"gold_ingot", "stick", "gold_ingot"},
                 {"gold_ingot", "redstone_dust", "gold_ingot"}
         };
-        ings = new String[] {"redstone_dust", "stick", "gold_ingot"};
+        ingredients = new String[] {"redstone_dust", "stick", "gold_ingot"};
         itemArr.add(new CraftableItem.Builder("Powered Rail")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .looksLike("@drawable/powered_rail")
                 .build());
@@ -1524,11 +1522,11 @@ public class RecipeFiller {
                 {"iron_ingot", "stone_pressure_plate", "iron_ingot"},
                 {"iron_ingot", "redstone_dust", "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot", "stone_pressure_plate", "redstone_dust"};
+        ingredients = new String[] {"iron_ingot", "stone_pressure_plate", "redstone_dust"};
         itemArr.add(new CraftableItem.Builder("Detector Rail")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .looksLike("@drawable/detector_rail")
                 .build());
@@ -1538,11 +1536,11 @@ public class RecipeFiller {
                 {"iron_ingot", null, "iron_ingot"},
                 {"iron_ingot", "iron_ingot", "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Minecart")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/minecart")
                 .build());
@@ -1552,11 +1550,11 @@ public class RecipeFiller {
                 {null, "tnt", null},
                 {null, "minecart", null}
         };
-        ings = new String[] {"minecart", "tnt"};
+        ingredients = new String[] {"minecart", "tnt"};
         itemArr.add(new CraftableItem.Builder("Minecart with TNT")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/minecart_with_tnt")
                 .build());
@@ -1566,11 +1564,11 @@ public class RecipeFiller {
                 {"iron_ingot", "redstone_torch", "iron_ingot"},
                 {"iron_ingot", "stick", "iron_ingot"}
         };
-        ings = new String[] {"iron_ingot", "stick", "redstone_torch"};
+        ingredients = new String[] {"iron_ingot", "stick", "redstone_torch"};
         itemArr.add(new CraftableItem.Builder("Activator Rail")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(6)
                 .looksLike("@drawable/activator_rail")
                 .build());
@@ -1580,11 +1578,11 @@ public class RecipeFiller {
                 {null, "hopper", null},
                 {null, "minecart", null}
         };
-        ings = new String[] {"hopper", "minecart"};
+        ingredients = new String[] {"hopper", "minecart"};
         itemArr.add(new CraftableItem.Builder("Minecart with Hopper")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/minecart_with_hopper")
                 .build());
@@ -1594,11 +1592,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", null, "oak_wood_plank"},
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Boat")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all types of wood.")
                 .looksLike("@drawable/boat")
@@ -1609,11 +1607,11 @@ public class RecipeFiller {
                 {null, "furnace", null},
                 {null, "minecart", null}
         };
-        ings = new String[] {"minecart", "furnace"};
+        ingredients = new String[] {"minecart", "furnace"};
         itemArr.add(new CraftableItem.Builder("Minecart with Furnace")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/minecart_with_furnace")
                 .build());
@@ -1627,11 +1625,11 @@ public class RecipeFiller {
                 {"red_mushroom", "brown_mushroom", null},
                 {null, "bowl", null}
         };
-        ings = new String[] {"red_mushroom", "brown_mushroom", "bowl"};
+        ingredients = new String[] {"red_mushroom", "brown_mushroom", "bowl"};
         itemArr.add(new CraftableItem.Builder("Mushroom Stew")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/mushroom_soup")
                 .build());
@@ -1641,11 +1639,11 @@ public class RecipeFiller {
                 {"wheat", "wheat", "wheat"},
                 {null, null, null}
         };
-        ings = new String[] {"wheat"};
+        ingredients = new String[] {"wheat"};
         itemArr.add(new CraftableItem.Builder("Bread")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/bread")
                 .build());
@@ -1655,11 +1653,11 @@ public class RecipeFiller {
                 {"wheat", "cocoa_beans", "wheat"},
                 {null, null, null}
         };
-        ings = new String[] {"wheat", "cocoa_beans"};
+        ingredients = new String[] {"wheat", "cocoa_beans"};
         itemArr.add(new CraftableItem.Builder("Cookie")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(8)
                 .looksLike("@drawable/cookie")
                 .build());
@@ -1669,11 +1667,11 @@ public class RecipeFiller {
                 {"gold_nugget", "carrot", "gold_nugget"},
                 {"gold_nugget", "gold_nugget", "gold_nugget"}
         };
-        ings = new String[] {"carrot", "gold_nugget"};
+        ingredients = new String[] {"carrot", "gold_nugget"};
         itemArr.add(new CraftableItem.Builder("Golden Carrot")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/golden_carrot")
                 .build());
@@ -1683,11 +1681,11 @@ public class RecipeFiller {
                 {"pumpkin", "sugar", null},
                 {null, "egg", null}
         };
-        ings = new String[] {"sugar", "egg", "pumpkin"};
+        ingredients = new String[] {"sugar", "egg", "pumpkin"};
         itemArr.add(new CraftableItem.Builder("Pumpkin Pie")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/pumpkin_pie")
                 .build());
@@ -1697,11 +1695,11 @@ public class RecipeFiller {
                 {"sugar", "egg", "sugar"},
                 {"wheat", "wheat", "wheat"}
         };
-        ings = new String[] {"sugar", "egg", "milk", "wheat"};
+        ingredients = new String[] {"sugar", "egg", "milk", "wheat"};
         itemArr.add(new CraftableItem.Builder("Cake")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/cake")
                 .build());
@@ -1711,11 +1709,11 @@ public class RecipeFiller {
                 {"carrot", "baked_potato", "red_mushroom"},
                 {null, "bowl", null}
         };
-        ings = new String[] {"carrot", "bowl", "cooked_rabbit", "red_mushroom", "baked_potato"};
+        ingredients = new String[] {"carrot", "bowl", "cooked_rabbit", "red_mushroom", "baked_potato"};
         itemArr.add(new CraftableItem.Builder("Rabbit Stew")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/rabbit_stew")
                 .build());
@@ -1725,11 +1723,11 @@ public class RecipeFiller {
                 {"gold_ingot", "apple", "gold_ingot"},
                 {"gold_ingot", "gold_ingot", "gold_ingot"}
         };
-        ings = new String[] {"gold_ingot", "apple"};
+        ingredients = new String[] {"gold_ingot", "apple"};
         itemArr.add(new CraftableItem.Builder("Golden Apple")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/golden_apple")
                 .build());
@@ -1743,11 +1741,11 @@ public class RecipeFiller {
                 {"iron_ingot", "flint", null},
                 {null, null, null}
         };
-        ings = new String[] {"iron_ingot", "flint"};
+        ingredients = new String[] {"iron_ingot", "flint"};
         itemArr.add(new CraftableItem.Builder("Flint and Steel")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/flint_and_steel")
                 .build());
@@ -1757,11 +1755,11 @@ public class RecipeFiller {
                 {null, "stick", null},
                 {null, "stick", null}
         };
-        ings = new String[] {"diamond", "stick"};
+        ingredients = new String[] {"diamond", "stick"};
         itemArr.add(new CraftableItem.Builder("Pickaxe")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for Iron, all wood, Gold, and Cobblestone.")
                 .looksLike("@drawable/diamond_pickaxe")
@@ -1772,11 +1770,11 @@ public class RecipeFiller {
                 {null, "stick", null},
                 {null, "stick", null}
         };
-        ings = new String[] {"diamond", "stick"};
+        ingredients = new String[] {"diamond", "stick"};
         itemArr.add(new CraftableItem.Builder("Shovel")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for Iron, all wood, Gold, and Cobblestone.")
                 .looksLike("@drawable/diamond_shovel")
@@ -1787,11 +1785,11 @@ public class RecipeFiller {
                 {null, "iron_ingot", null},
                 {"iron_ingot", null, null}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Shears")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/shears")
                 .build());
@@ -1801,11 +1799,11 @@ public class RecipeFiller {
                 {null, "stick", null},
                 {null, "stick", null}
         };
-        ings = new String[] {"diamond", "stick"};
+        ingredients = new String[] {"diamond", "stick"};
         itemArr.add(new CraftableItem.Builder("Hoe")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for Iron, all wood, Gold, and Cobblestone.")
                 .looksLike("@drawable/diamond_hoe")
@@ -1816,11 +1814,11 @@ public class RecipeFiller {
                 {null, "stick", "string"},
                 {"stick", "string", "string"}
         };
-        ings = new String[] {"stick", "diamond"};
+        ingredients = new String[] {"stick", "diamond"};
         itemArr.add(new CraftableItem.Builder("Fishing Rod")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/fishing_rod")
                 .build());
@@ -1830,11 +1828,11 @@ public class RecipeFiller {
                 {null, "stick", "diamond"},
                 {null, "stick", null}
         };
-        ings = new String[] {"stick", "diamond"};
+        ingredients = new String[] {"stick", "diamond"};
         itemArr.add(new CraftableItem.Builder("Axe")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for Iron, all wood planks, Gold, and Cobblestone.")
                 .looksLike("@drawable/diamond_axe")
@@ -1845,11 +1843,11 @@ public class RecipeFiller {
                 {"gold_ingot", "redstone_dust", "gold_ingot"},
                 {null, "gold_ingot", null}
         };
-        ings = new String[] {"gold_ingot", "redstone_dust"};
+        ingredients = new String[] {"gold_ingot", "redstone_dust"};
         itemArr.add(new CraftableItem.Builder("Clock")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/clock")
                 .build());
@@ -1859,11 +1857,11 @@ public class RecipeFiller {
                 {"iron_ingot", "redstone_dust", "iron_ingot"},
                 {null, "iron_ingot", null}
         };
-        ings = new String[] {"iron_ingot", "redstone_dust"};
+        ingredients = new String[] {"iron_ingot", "redstone_dust"};
         itemArr.add(new CraftableItem.Builder("Compass")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/compass")
                 .build());
@@ -1873,11 +1871,11 @@ public class RecipeFiller {
                 {"string", "slime_ball", null},
                 {null, null, "string"}
         };
-        ings = new String[] {"string", "slime_ball"};
+        ingredients = new String[] {"string", "slime_ball"};
         itemArr.add(new CraftableItem.Builder("Lead")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(2)
                 .looksLike("@drawable/lead")
                 .build());
@@ -1887,11 +1885,11 @@ public class RecipeFiller {
                 {null, "diamond", null},
                 {null, "stick", null}
         };
-        ings = new String[] {"stick", "diamond"};
+        ingredients = new String[] {"stick", "diamond"};
         itemArr.add(new CraftableItem.Builder("Sword")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for all wood planks, Cobblestone, Iron, Gold, and Diamond.")
                 .looksLike("@drawable/sword_diamond")
@@ -1902,11 +1900,11 @@ public class RecipeFiller {
                 {"diamond", "diamond", "diamond"},
                 {"diamond", null, "diamond"}
         };
-        ings = new String[] {"diamond"};
+        ingredients = new String[] {"diamond"};
         itemArr.add(new CraftableItem.Builder("Helmet")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
                 .looksLike("@drawable/helmet_diamond")
@@ -1917,29 +1915,29 @@ public class RecipeFiller {
                 {"diamond", "diamond", "diamond"},
                 {"diamond", "diamond", "diamond"}
         };
-        ings = new String[] {"diamond"};
+        ingredients = new String[] {"diamond"};
         itemArr.add(new CraftableItem.Builder("Chestplate")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
                 .looksLike("@drawable/chestplate_diamond")
                 .build());
-        // ================== Leggings =================== //
+        // ================== Leggingredients =================== //
         tempLayout = new String[][] {
                 {"diamond", "diamond", "diamond"},
                 {"diamond", null, "diamond"},
                 {"diamond", null, "diamond"}
         };
-        ings = new String[] {"diamond"};
-        itemArr.add(new CraftableItem.Builder("Leggings")
+        ingredients = new String[] {"diamond"};
+        itemArr.add(new CraftableItem.Builder("Leggingredients")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
-                .looksLike("@drawable/leggings_diamond")
+                .looksLike("@drawable/leggingredients_diamond")
                 .build());
         // ================== Boots =================== //
         tempLayout = new String[][] {
@@ -1947,11 +1945,11 @@ public class RecipeFiller {
                 {"diamond", null, "diamond"},
                 {"diamond", null, "diamond"}
         };
-        ings = new String[] {"diamond"};
+        ingredients = new String[] {"diamond"};
         itemArr.add(new CraftableItem.Builder("Boots")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for leather, Iron, Gold, and Diamond")
                 .looksLike("@drawable/boots_diamond")
@@ -1962,11 +1960,11 @@ public class RecipeFiller {
                 {"stick", null, "string"},
                 {null, "stick", "string"}
         };
-        ings = new String[] {"stick", "string"};
+        ingredients = new String[] {"stick", "string"};
         itemArr.add(new CraftableItem.Builder("Bow")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/bow")
                 .build());
@@ -1976,11 +1974,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", "oak_wood_plank", "oak_wood_plank"},
                 {null, "oak_wood_plank", null}
         };
-        ings = new String[] {"oak_wood_plank", "iron_ingot"};
+        ingredients = new String[] {"oak_wood_plank", "iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Shield")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("This recipe is valid for any combinations of types of wood planks.")
                 .looksLike("@drawable/shield")
@@ -1991,11 +1989,11 @@ public class RecipeFiller {
                 {null, "stick", null},
                 {null, "feather", null}
         };
-        ings = new String[] {"flint", "stick", "feather"};
+        ingredients = new String[] {"flint", "stick", "feather"};
         itemArr.add(new CraftableItem.Builder("Arrow")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/arrow")
                 .build());
@@ -2005,11 +2003,11 @@ public class RecipeFiller {
                 {"glowstone_dust", "arrow", "glowstone_dust"},
                 {null, "glowstone_dust", null}
         };
-        ings = new String[] {"arrow", "glowstone_dust"};
+        ingredients = new String[] {"arrow", "glowstone_dust"};
         itemArr.add(new CraftableItem.Builder("Spectral Arrow")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(2)
                 .describedAs("This recipe is valid for any combinations of types of wood planks.")
                 .looksLike("@drawable/arrow_spectral")
@@ -2020,11 +2018,11 @@ public class RecipeFiller {
                 {"arrow", "water_bottle", "arrow"},
                 {"arrow", "arrow", "arrow"}
         };
-        ings = new String[] {"arrow", "water_bottle"};
+        ingredients = new String[] {"arrow", "water_bottle"};
         itemArr.add(new CraftableItem.Builder("Tipped Arrow")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(8)
                 .describedAs("This recipe is valid for any Lingering Potion.")
                 .looksLike("@drawable/arrow")
@@ -2035,11 +2033,11 @@ public class RecipeFiller {
                 {null, "hay_bale", null},
                 {null, null, null}
         };
-        ings = new String[] {"hay_bale"};
+        ingredients = new String[] {"hay_bale"};
         itemArr.add(new CraftableItem.Builder("Wheat")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/wheat")
                 .build());
@@ -2049,11 +2047,11 @@ public class RecipeFiller {
                 {"oak_wood_plank", null, "oak_wood_plank"},
                 {null, "oak_wood_plank", null}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Bowl")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/bowl")
                 .build());
@@ -2063,11 +2061,11 @@ public class RecipeFiller {
                 {null, "coal_block", null},
                 {null, null, null}
         };
-        ings = new String[] {"coal_block"};
+        ingredients = new String[] {"coal_block"};
         itemArr.add(new CraftableItem.Builder("Coal")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/coal")
                 .build());
@@ -2077,11 +2075,11 @@ public class RecipeFiller {
                 {null, "sugar_cane", null},
                 {null, null, null}
         };
-        ings = new String[] {"sugar_cane"};
+        ingredients = new String[] {"sugar_cane"};
         itemArr.add(new CraftableItem.Builder("Sugar")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/sugar")
                 .build());
@@ -2091,11 +2089,11 @@ public class RecipeFiller {
                 {"rabbit_hide", "rabbit_hide", null},
                 {"rabbit_hide", "rabbit_hide", null}
         };
-        ings = new String[] {"rabbit_hide"};
+        ingredients = new String[] {"rabbit_hide"};
         itemArr.add(new CraftableItem.Builder("Leather")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/leather")
                 .build());
@@ -2105,11 +2103,11 @@ public class RecipeFiller {
                 {null, "dandelion", null},
                 {null, null, null}
         };
-        ings = new String[] {"dandelion"};
+        ingredients = new String[] {"dandelion"};
         itemArr.add(new CraftableItem.Builder("Dandelion Yellow")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Dandelion Yellow can also be crafted from one Sunflower (yields 2).")
                 .looksLike("@drawable/dandelion_yellow")
@@ -2120,11 +2118,11 @@ public class RecipeFiller {
                 {"ink_sac", "bonemeal", null},
                 {null, null, null}
         };
-        ings = new String[] {"ink_sac", "bonemeal"};
+        ingredients = new String[] {"ink_sac", "bonemeal"};
         itemArr.add(new CraftableItem.Builder("Gray Dye")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(2)
                 .looksLike("@drawable/gray_dye")
                 .build());
@@ -2134,11 +2132,11 @@ public class RecipeFiller {
                 {null, "pumpkin", null},
                 {null, null, null}
         };
-        ings = new String[] {"pumpkin"};
+        ingredients = new String[] {"pumpkin"};
         itemArr.add(new CraftableItem.Builder("Pumpkin Seeds")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .looksLike("@drawable/pumpkin_seeds")
                 .build());
@@ -2148,11 +2146,11 @@ public class RecipeFiller {
                 {null, "gold_ingot", null},
                 {null, null, null}
         };
-        ings = new String[] {"gold_ingot"};
+        ingredients = new String[] {"gold_ingot"};
         itemArr.add(new CraftableItem.Builder("Gold Nugget")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/gold_nugget")
                 .build());
@@ -2162,11 +2160,11 @@ public class RecipeFiller {
                 {null, "gold_block", null},
                 {null, null, null}
         };
-        ings = new String[] {"gold_block"};
+        ingredients = new String[] {"gold_block"};
         itemArr.add(new CraftableItem.Builder("Gold Ingot")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .describedAs("Gold ingots can also be crafted using a full crafting interface of, or 9, gold nuggets.")
                 .looksLike("@drawable/gold_ingot")
@@ -2177,11 +2175,11 @@ public class RecipeFiller {
                 {null, "red_tulip", null},
                 {null, null, null}
         };
-        ings = new String[] {"red_tulip"};
+        ingredients = new String[] {"red_tulip"};
         itemArr.add(new CraftableItem.Builder("Rose Red")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Rose Red can also be crafted from one Poppy, Beetroot, or Rose Bush (yields 2)")
                 .looksLike("@drawable/rose_red")
@@ -2192,11 +2190,11 @@ public class RecipeFiller {
                 {null, "orange_tulip", null},
                 {null, null, null}
         };
-        ings = new String[] {"orange_tulip"};
+        ingredients = new String[] {"orange_tulip"};
         itemArr.add(new CraftableItem.Builder("Orange Dye")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Orange Dye can also be crafted via combining Rose Red and Dandelion Yellow (shapeless recipe, yields 2)")
                 .looksLike("@drawable/orange_dye")
@@ -2207,11 +2205,11 @@ public class RecipeFiller {
                 {null, "pink_tulip", null},
                 {null, null, null}
         };
-        ings = new String[] {"pink_tulip"};
+        ingredients = new String[] {"pink_tulip"};
         itemArr.add(new CraftableItem.Builder("Pink Dye")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Pink Dye can also be crafted from one Peony (yields 2), or from one Rose Red and one Bonemeal (shapeless recipe, yields 2).")
                 .looksLike("@drawable/pink_dye")
@@ -2222,11 +2220,11 @@ public class RecipeFiller {
                 {"cactus_green", "bonemeal", null},
                 {null, null, null}
         };
-        ings = new String[] {"cactus_green", "bonemeal"};
+        ingredients = new String[] {"cactus_green", "bonemeal"};
         itemArr.add(new CraftableItem.Builder("Lime Dye")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(2)
                 .looksLike("@drawable/lime_dye")
                 .build());
@@ -2236,11 +2234,11 @@ public class RecipeFiller {
                 {"lapis", "rose_red", null},
                 {null, null, null}
         };
-        ings = new String[] {"lapis", "rose_red"};
+        ingredients = new String[] {"lapis", "rose_red"};
         itemArr.add(new CraftableItem.Builder("Purple Dye")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(2)
                 .looksLike("@drawable/purple_dye")
                 .build());
@@ -2250,11 +2248,11 @@ public class RecipeFiller {
                 {"lapis", "cactus_green", null},
                 {null, null, null}
         };
-        ings = new String[] {"lapis", "cactus_green"};
+        ingredients = new String[] {"lapis", "cactus_green"};
         itemArr.add(new CraftableItem.Builder("Cyan Dye")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(2)
                 .looksLike("@drawable/cyan_dye")
                 .build());
@@ -2264,11 +2262,11 @@ public class RecipeFiller {
                 {null, "white_tulip", null},
                 {null, null, null}
         };
-        ings = new String[] {"white_tulip"};
+        ingredients = new String[] {"white_tulip"};
         itemArr.add(new CraftableItem.Builder("Light Grey Dye")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Light Gray Dye can also be crafted from one Azure Bluet or one Oxeye Daisy, from two Bonemeal and one Ink Sac (shapeless, yields 3), or from one Gray Dye and one Bonemeal (shapeless, yields 2).")
                 .looksLike("@drawable/light_gray_dye")
@@ -2279,11 +2277,11 @@ public class RecipeFiller {
                 {null, "allium", null},
                 {null, null, null}
         };
-        ings = new String[] {"allium"};
+        ingredients = new String[] {"allium"};
         itemArr.add(new CraftableItem.Builder("Magenta Dye")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Magenta dye can also be crafted from one Lilac (yields 2), from Purple and Pink dyes (shapeless, yields 2), from two Rose Red with one Lapis and one Bonemeal (shapeless, yields 4), or from one Pink Dye and one Rose Red and One Lapis (shapeless, yields 3).")
                 .looksLike("@drawable/magenta_dye")
@@ -2294,11 +2292,11 @@ public class RecipeFiller {
                 {null, "blue_orchid", null},
                 {null, null, null}
         };
-        ings = new String[] {"blue_orchid"};
+        ingredients = new String[] {"blue_orchid"};
         itemArr.add(new CraftableItem.Builder("Light Blue Dye")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Light Blue Dye can also be crafted from one Lapis and one Bonemeal (shapeless, yields 2)")
                 .looksLike("@drawable/light_blue_dye")
@@ -2309,11 +2307,11 @@ public class RecipeFiller {
                 {null, "emerald_block", null},
                 {null, null, null}
         };
-        ings = new String[] {"emerald_block"};
+        ingredients = new String[] {"emerald_block"};
         itemArr.add(new CraftableItem.Builder("Emerald")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/emerald")
                 .build());
@@ -2323,11 +2321,11 @@ public class RecipeFiller {
                 {null, "iron_block", null},
                 {null, null, null}
         };
-        ings = new String[] {"iron_block"};
+        ingredients = new String[] {"iron_block"};
         itemArr.add(new CraftableItem.Builder("Iron Ingot")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .describedAs("Iron Ingot can also be crafted from a full crafting interface of Iron Nuggets (yields 1).")
                 .looksLike("@drawable/iron_ingot")
@@ -2338,11 +2336,11 @@ public class RecipeFiller {
                 {null, "lapis_block", null},
                 {null, null, null}
         };
-        ings = new String[] {"lapis_block"};
+        ingredients = new String[] {"lapis_block"};
         itemArr.add(new CraftableItem.Builder("Lapis Lazuli")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/lapis")
                 .build());
@@ -2352,11 +2350,11 @@ public class RecipeFiller {
                 {null, "bone", null},
                 {null, null, null}
         };
-        ings = new String[] {"bone"};
+        ingredients = new String[] {"bone"};
         itemArr.add(new CraftableItem.Builder("Bonemeal")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .describedAs("This recipe is also valid for one Bone Block (yields 9).")
                 .looksLike("@drawable/bonemeal")
@@ -2367,11 +2365,11 @@ public class RecipeFiller {
                 {null, "oak_wood_plank", null},
                 {null, "oak_wood_plank", null}
         };
-        ings = new String[] {"oak_wood_plank"};
+        ingredients = new String[] {"oak_wood_plank"};
         itemArr.add(new CraftableItem.Builder("Stick")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(4)
                 .describedAs("This recipe is valid for any combination of types of wood planks.")
                 .looksLike("@drawable/stick")
@@ -2382,11 +2380,11 @@ public class RecipeFiller {
                 {null, "iron_ingot", null},
                 {null, null, null}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Iron Nugget")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/iron_nugget")
                 .build());
@@ -2396,11 +2394,11 @@ public class RecipeFiller {
                 {null, "melon_slice", null},
                 {null, null, null}
         };
-        ings = new String[] {"melon_slice"};
+        ingredients = new String[] {"melon_slice"};
         itemArr.add(new CraftableItem.Builder("Melon Seeds")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/melon_seeds")
                 .build());
@@ -2410,11 +2408,11 @@ public class RecipeFiller {
                 {null, "diamond_block", null},
                 {null, null, null}
         };
-        ings = new String[] {"diamond_block"};
+        ingredients = new String[] {"diamond_block"};
         itemArr.add(new CraftableItem.Builder("Diamond")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(9)
                 .looksLike("@drawable/diamond")
                 .build());
@@ -2424,11 +2422,11 @@ public class RecipeFiller {
                 {"gunpowder", "light_blue_dye", "feather"},
                 {"glowstone_dust", "diamond", null}
         };
-        ings = new String[] {"gunpowder", "light_blue_dye", "feather", "glowstone_dust", "diamond"};
+        ingredients = new String[] {"gunpowder", "light_blue_dye", "feather", "glowstone_dust", "diamond"};
         itemArr.add(new CraftableItem.Builder("Firework Star")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Firework Star recipes are fairly complex. A basic star (Small Ball explosion) is simply Gunpowder and Dye. Special effects may be achieved via adding the following ingredients: Fire Charge (Large Ball), Gold Nugget (Star Explision), any Head (Creeper face), Feather (Burst), Glowstone Dust (Twinkle/Crackle), Diamond (Trail/Willow). A Fade may be added by combinin an existing star with Dye.")
                 .looksLike("@drawable/firework_star")
@@ -2439,11 +2437,11 @@ public class RecipeFiller {
                 {"iron_ingot", null, "iron_ingot"},
                 {null, "iron_ingot", null}
         };
-        ings = new String[] {"iron_ingot"};
+        ingredients = new String[] {"iron_ingot"};
         itemArr.add(new CraftableItem.Builder("Bucket")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/bucket")
                 .build());
@@ -2453,11 +2451,11 @@ public class RecipeFiller {
                 {"blaze_powder", "ender_pearl", null},
                 {null, null, null}
         };
-        ings = new String[] {"blaze_powder", "ender_pearl"};
+        ingredients = new String[] {"blaze_powder", "ender_pearl"};
         itemArr.add(new CraftableItem.Builder("Eye of Ender")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/eye_of_ender")
                 .build());
@@ -2467,11 +2465,11 @@ public class RecipeFiller {
                 {"book", "ink_sac", null},
                 {null, "feather", null}
         };
-        ings = new String[] {"book", "ink_sac", "feather"};
+        ingredients = new String[] {"book", "ink_sac", "feather"};
         itemArr.add(new CraftableItem.Builder("Book and Quill")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/book_and_quill")
                 .build());
@@ -2481,11 +2479,11 @@ public class RecipeFiller {
                 {"book_and_quill", "book", null},
                 {null, null, null}
         };
-        ings = new String[] {"book", "book_and_quill"};
+        ingredients = new String[] {"book", "book_and_quill"};
         itemArr.add(new CraftableItem.Builder("Written Book")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("The yield of this recipe can be increased by adding more Book and Quills to the recipe, up to 8.")
                 .looksLike("@drawable/book")
@@ -2496,11 +2494,11 @@ public class RecipeFiller {
                 {"paper", "compass", "paper"},
                 {"paper", "paper", "paper"}
         };
-        ings = new String[] {"compass", "paper"};
+        ingredients = new String[] {"compass", "paper"};
         itemArr.add(new CraftableItem.Builder("Map (Empty)")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/map")
                 .build());
@@ -2510,11 +2508,11 @@ public class RecipeFiller {
                 {"paper", "map", "paper"},
                 {"paper", "paper", "paper"}
         };
-        ings = new String[] {"paper", "map"};
+        ingredients = new String[] {"paper", "map"};
         itemArr.add(new CraftableItem.Builder("Map (Zoomed Out)")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/map")
                 .build());
@@ -2524,11 +2522,11 @@ public class RecipeFiller {
                 {"blaze_powder", "coal", null},
                 {null, "gunpowder", null}
         };
-        ings = new String[] {"blaze_powder", "coal", "gunpowder"};
+        ingredients = new String[] {"blaze_powder", "coal", "gunpowder"};
         itemArr.add(new CraftableItem.Builder("Fire Charge")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .describedAs("Fire Charge can also be created using charcoal instead of coal.")
                 .looksLike("@drawable/fire_charge")
@@ -2539,11 +2537,11 @@ public class RecipeFiller {
                 {"glass", "nether_star", "glass"},
                 {"obsidian", "obsidian", "obsidian"}
         };
-        ings = new String[] {"glass", "nether_star", "obsidian"};
+        ingredients = new String[] {"glass", "nether_star", "obsidian"};
         itemArr.add(new CraftableItem.Builder("Beacon")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/beacon")
                 .build());
@@ -2553,13 +2551,13 @@ public class RecipeFiller {
                 {"paper", null, null},
                 {"gunpowder", null, null}
         };
-        ings = new String[] {"nether_star", "obsidian"};
+        ingredients = new String[] {"nether_star", "obsidian"};
         itemArr.add(new CraftableItem.Builder("Firework Rocket")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
-                .describedAs("The addition of more gunpowder increases the duration of the rocket (up to 3 gunpowders). You may also Firework Stars (up to 7).")
+                .describedAs("The addition of more gunpowder increases the duration of the rocket (up to 3 gunpowders). You may also include Firework Stars (up to 7).")
                 .looksLike("@drawable/firework_rocket")
                 .build());
         // ================== Paper =================== //
@@ -2568,11 +2566,11 @@ public class RecipeFiller {
                 {"sugar_cane", "sugar_cane", "sugar_cane"},
                 {null, null, null}
         };
-        ings = new String[] {"sugar_cane"};
+        ingredients = new String[] {"sugar_cane"};
         itemArr.add(new CraftableItem.Builder("Paper")
                 .withLayout(tempLayout)
                 .ofType("normal")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(3)
                 .looksLike("@drawable/paper")
                 .build());
@@ -2582,11 +2580,11 @@ public class RecipeFiller {
                 {"paper", "paper", null},
                 {"paper", "leather", null}
         };
-        ings = new String[] {"paper", "leather"};
+        ingredients = new String[] {"paper", "leather"};
         itemArr.add(new CraftableItem.Builder("Book")
                 .withLayout(tempLayout)
                 .ofType("shapeless")
-                .usingIngredients(ings)
+                .usingIngredients(ingredients)
                 .yielding(1)
                 .looksLike("@drawable/book")
                 .build());

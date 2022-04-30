@@ -1,15 +1,15 @@
 <resources>
     <!--Initial app strings-->
     <string name="app_name">Minecraft Calculator</string>
-    <string name="lin_dist">Linear Distance Calculator</string>
+    <string name="lin_dist">Distance Calculator</string>
     <string name="items">Item Calculator</string>
     <string name="circle_maker">Circle Helper</string>
     <string name="recipes">Recipes/Crafting</string>
     <string name="wiki_link">Minecraft Wiki</string>
     <!--Linear Distance strings-->
     <string name="clear_button">Clear Fields</string>
-    <string name="two_dimension">2d Distance</string>
-    <string name="three_dimension">3d Distance</string>
+    <string name="two_dimension">2d</string>
+    <string name="three_dimension">3d</string>
     <string name="calc">Calculate</string>
     <string name="X1label">X1</string>
     <string name="Y1label">Y1</string>
@@ -23,7 +23,7 @@
     <string name="stack_label">Stacks</string>
     <string name="chest_label">Single Chests</string>
     <string name="dchest_label">Double Chests</string>
-    <string name="remainder_label">R:</string>
+    <string name="remainder_label">R</string>
     <string name="stacks_to_label">Stack Base</string>
     <string name="zero">0</string>
     <string name="stack_64">64</string>
@@ -31,7 +31,7 @@
     <string name="items_label">Items</string>
     <string name="stacks_results_label">Number of Stacks</string>
     <string name="items_results_label">Number of Items</string>
-    <string name="item_hint">----</string>
+    <string name="item_hint">Enter a value</string>
     <!--Circle Helper strings-->
     <string name="increment">+</string>
     <string name="decrement">-</string>

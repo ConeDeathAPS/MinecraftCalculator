@@ -1,7 +1,7 @@
 package com.example.andrew.minecraftcalculator;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -12,7 +12,6 @@ import android.view.View;
 import android.content.Context;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Recipes extends AppCompatActivity {
@@ -46,12 +45,8 @@ public class Recipes extends AppCompatActivity {
         "Book", "Paper"
     };
 
-    public CraftableItem selectedItem;
-    public int yieldNum;
-    public String yieldItem;
     public List<CraftableItem> allItems;
     public CraftableItem errorItem;
-    public CraftableItem emptyItem;
     public RecipeFiller populator = new RecipeFiller();
     public Context thisContext;
     public AutoCompleteTextView searchInput;
@@ -84,7 +79,7 @@ public class Recipes extends AppCompatActivity {
 
         //Init the auto-completing search bar
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, items);
-        searchInput = (AutoCompleteTextView) findViewById(R.id.itemInput);
+        searchInput = findViewById(R.id.itemInput);
         searchInput.setAdapter(adapter);
         searchInput.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -99,18 +94,18 @@ public class Recipes extends AppCompatActivity {
         });
 
         //Find the image views for each slot
-        r1c1 = (ImageView) findViewById(R.id.r1c1_image);
-        r1c2 = (ImageView) findViewById(R.id.r1c2_image);
-        r1c3 = (ImageView) findViewById(R.id.r1c3_image);
-        r2c1 = (ImageView) findViewById(R.id.r2c1_image);
-        r2c2 = (ImageView) findViewById(R.id.r2c2_image);
-        r2c3 = (ImageView) findViewById(R.id.r2c3_image);
-        r3c1 = (ImageView) findViewById(R.id.r3c1_image);
-        r3c2 = (ImageView) findViewById(R.id.r3c2_image);
-        r3c3 = (ImageView) findViewById(R.id.r3c3_image);
-        outputItem = (ImageView) findViewById(R.id.output_image);
-        yieldOutput = (TextView) findViewById(R.id.yield);
-        recipeDescription = (TextView) findViewById(R.id.recipeDescription);
+        r1c1 = findViewById(R.id.r1c1_image);
+        r1c2 = findViewById(R.id.r1c2_image);
+        r1c3 = findViewById(R.id.r1c3_image);
+        r2c1 = findViewById(R.id.r2c1_image);
+        r2c2 = findViewById(R.id.r2c2_image);
+        r2c3 = findViewById(R.id.r2c3_image);
+        r3c1 = findViewById(R.id.r3c1_image);
+        r3c2 = findViewById(R.id.r3c2_image);
+        r3c3 = findViewById(R.id.r3c3_image);
+        outputItem = findViewById(R.id.output_image);
+        yieldOutput = findViewById(R.id.yield);
+        recipeDescription = findViewById(R.id.recipeDescription);
     }
 
     public CraftableItem findItem(String name) {
